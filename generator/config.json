@@ -1,0 +1,12 @@
+{
+  "templateDir": "templates",
+  "packageName": "Seacommerce\\Unit4\\Multivers\\Sdk",
+  "invokerPackage": "Seacommerce\\Unit4\\Multivers\\Sdk",
+  "gitUserId": "Seacommerce",
+  "gitRepoId": "multivers-sdk-php",
+  "srcBasePath": "src",
+  "composerVendorName": "seacommerce",
+  "composerProjectName": "multivers-sdk",
+  "artifactVersion": "110.0.0",
+  "variableNamingConvention": "camelCase"
+}

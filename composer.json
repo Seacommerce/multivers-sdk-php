@@ -1,0 +1,43 @@
+{
+    "name": "seacommerce/multivers-sdk",
+    "version": "110.0.0",
+    "description": "Unofficial SDK for the UNIT4 Multivers WebApi version 1.10.0 (by Seacommerce).",
+    "keywords": [
+        "unit4",
+        "multivers",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "http://seacommerce.nl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seacommerce",
+            "homepage": "http://seacommerce.nl"
+        },
+        {
+            "name": "OpenAPI-Generator contributors",
+            "homepage": "https://openapi-generator.tech"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "~2.6",
+        "friendsofphp/php-cs-fixer": "~2.12"
+    },
+    "autoload": {
+        "psr-4": { "Seacommerce\\Unit4\\Multivers\\Sdk\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Seacommerce\\Unit4\\Multivers\\Sdk\\" : "test/" }
+    }
+}
