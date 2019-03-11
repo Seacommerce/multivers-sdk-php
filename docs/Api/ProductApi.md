@@ -15,8 +15,6 @@ Method | HTTP request | Description
 
 Deletes the specified Product
 
-Deletes the specified Product
-
 ### Example
 ```php
 <?php
@@ -68,8 +66,6 @@ void (empty response body)
 
 # **getProduct**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\Product getProduct($database, $productId)
-
-Gets the specified Product.
 
 Gets the specified Product.
 
@@ -128,8 +124,6 @@ Name | Type | Description  | Notes
 
 Creates a new Product with the specified values
 
-Creates a new Product with the specified values
-
 ### Example
 ```php
 <?php
@@ -180,8 +174,6 @@ Name | Type | Description  | Notes
 
 # **putProduct**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\Product putProduct($database, $productId)
-
-Updates the specified Product
 
 Updates the specified Product
 

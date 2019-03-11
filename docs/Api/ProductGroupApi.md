@@ -15,8 +15,6 @@ Method | HTTP request | Description
 
 Deletes the specified ProductGroup
 
-Deletes the specified ProductGroup
-
 ### Example
 ```php
 <?php
@@ -68,8 +66,6 @@ void (empty response body)
 
 # **getProductGroup**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup getProductGroup($database, $productGroupId)
-
-Gets the specified ProductGroup.
 
 Gets the specified ProductGroup.
 
@@ -128,8 +124,6 @@ Name | Type | Description  | Notes
 
 Creates a new ProductGroup with the specified values
 
-Creates a new ProductGroup with the specified values
-
 ### Example
 ```php
 <?php
@@ -180,8 +174,6 @@ Name | Type | Description  | Notes
 
 # **putProductGroup**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup putProductGroup($database, $productGroupId)
-
-Updates the specified ProductGroup
 
 Updates the specified ProductGroup
 

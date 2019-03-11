@@ -12,8 +12,6 @@ Method | HTTP request | Description
 
 Gets a name value list of CustomerGroupNVL that matches the specified criteria
 
-Gets a name value list of CustomerGroupNVL that matches the specified criteria
-
 ### Example
 ```php
 <?php

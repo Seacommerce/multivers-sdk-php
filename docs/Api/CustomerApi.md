@@ -16,8 +16,6 @@ Method | HTTP request | Description
 
 Deletes the specified Customer
 
-Deletes the specified Customer
-
 ### Example
 ```php
 <?php
@@ -72,8 +70,6 @@ void (empty response body)
 
 Deletes the specified Customer
 
-Deletes the specified Customer
-
 ### Example
 ```php
 <?php
@@ -125,8 +121,6 @@ void (empty response body)
 
 # **getCustomer**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\Customer getCustomer($database, $customerId)
-
-Gets the specified Customer.
 
 Gets the specified Customer.
 
@@ -185,8 +179,6 @@ Name | Type | Description  | Notes
 
 Creates a new Customer with the specified values
 
-Creates a new Customer with the specified values
-
 ### Example
 ```php
 <?php
@@ -237,8 +229,6 @@ Name | Type | Description  | Notes
 
 # **putCustomer**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\Customer putCustomer($database, $customerId)
-
-Updates the specified Customer
 
 Updates the specified Customer
 

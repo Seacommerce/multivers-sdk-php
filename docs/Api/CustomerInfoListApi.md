@@ -12,8 +12,6 @@ Method | HTTP request | Description
 
 Gets a list of CustomerInfo that matches the specified criteria
 
-Gets a list of CustomerInfo that matches the specified criteria
-
 ### Example
 ```php
 <?php
