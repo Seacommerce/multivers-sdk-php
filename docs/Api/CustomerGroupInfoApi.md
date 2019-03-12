@@ -12,8 +12,6 @@ Method | HTTP request | Description
 
 Gets the specified CustomerGroupInfo.
 
-Gets the specified CustomerGroupInfo.
-
 ### Example
 ```php
 <?php

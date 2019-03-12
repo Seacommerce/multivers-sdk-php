@@ -88,6 +88,294 @@ class ProductGroupApi
     }
 
     /**
+     * Operation createProductGroupBy
+     *
+     * Creates a new ProductGroup with the specified values
+     *
+     * @param  string $database database (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup productGroup (optional)
+     *
+     * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup
+     */
+    public function createProductGroupBy($database, $productGroup = null)
+    {
+        list($response) = $this->createProductGroupByWithHttpInfo($database, $productGroup);
+        return $response;
+    }
+
+    /**
+     * Operation createProductGroupByWithHttpInfo
+     *
+     * Creates a new ProductGroup with the specified values
+     *
+     * @param  string $database (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
+     *
+     * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createProductGroupByWithHttpInfo($database, $productGroup = null)
+    {
+        $request = $this->createProductGroupByRequest($database, $productGroup);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createProductGroupByAsync
+     *
+     * Creates a new ProductGroup with the specified values
+     *
+     * @param  string $database (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createProductGroupByAsync($database, $productGroup = null)
+    {
+        return $this->createProductGroupByAsyncWithHttpInfo($database, $productGroup)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createProductGroupByAsyncWithHttpInfo
+     *
+     * Creates a new ProductGroup with the specified values
+     *
+     * @param  string $database (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createProductGroupByAsyncWithHttpInfo($database, $productGroup = null)
+    {
+        $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
+        $request = $this->createProductGroupByRequest($database, $productGroup);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createProductGroupBy'
+     *
+     * @param  string $database (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function createProductGroupByRequest($database, $productGroup = null)
+    {
+        // verify the required parameter 'database' is set
+        if ($database === null || (is_array($database) && count($database) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $database when calling createProductGroupBy'
+            );
+        }
+
+        $resourcePath = '/api/{database}/ProductGroup';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($database !== null) {
+            $resourcePath = str_replace(
+                '{' . 'database' . '}',
+                ObjectSerializer::toPathValue($database),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($productGroup)) {
+            $_tempBody = $productGroup;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+            } else {
+                $httpBody = $_tempBody;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation deleteProductGroup
      *
      * Deletes the specified ProductGroup
@@ -638,318 +926,40 @@ class ProductGroupApi
     }
 
     /**
-     * Operation postProductGroupBy
-     *
-     * Creates a new ProductGroup with the specified values
-     *
-     * @param  string $database database (required)
-     *
-     * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup
-     */
-    public function postProductGroupBy($database)
-    {
-        list($response) = $this->postProductGroupByWithHttpInfo($database);
-        return $response;
-    }
-
-    /**
-     * Operation postProductGroupByWithHttpInfo
-     *
-     * Creates a new ProductGroup with the specified values
-     *
-     * @param  string $database (required)
-     *
-     * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function postProductGroupByWithHttpInfo($database)
-    {
-        $request = $this->postProductGroupByRequest($database);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            switch($statusCode) {
-                case 200:
-                    if ('\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup' === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation postProductGroupByAsync
-     *
-     * Creates a new ProductGroup with the specified values
-     *
-     * @param  string $database (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function postProductGroupByAsync($database)
-    {
-        return $this->postProductGroupByAsyncWithHttpInfo($database)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation postProductGroupByAsyncWithHttpInfo
-     *
-     * Creates a new ProductGroup with the specified values
-     *
-     * @param  string $database (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function postProductGroupByAsyncWithHttpInfo($database)
-    {
-        $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
-        $request = $this->postProductGroupByRequest($database);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'postProductGroupBy'
-     *
-     * @param  string $database (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function postProductGroupByRequest($database)
-    {
-        // verify the required parameter 'database' is set
-        if ($database === null || (is_array($database) && count($database) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling postProductGroupBy'
-            );
-        }
-
-        $resourcePath = '/api/{database}/ProductGroup';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($database !== null) {
-            $resourcePath = str_replace(
-                '{' . 'database' . '}',
-                ObjectSerializer::toPathValue($database),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation putProductGroup
+     * Operation updateProductGroup
      *
      * Updates the specified ProductGroup
      *
      * @param  string $database database (required)
      * @param  string $productGroupId productGroupId (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup productGroup (optional)
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup
      */
-    public function putProductGroup($database, $productGroupId)
+    public function updateProductGroup($database, $productGroupId, $productGroup = null)
     {
-        list($response) = $this->putProductGroupWithHttpInfo($database, $productGroupId);
+        list($response) = $this->updateProductGroupWithHttpInfo($database, $productGroupId, $productGroup);
         return $response;
     }
 
     /**
-     * Operation putProductGroupWithHttpInfo
+     * Operation updateProductGroupWithHttpInfo
      *
      * Updates the specified ProductGroup
      *
      * @param  string $database (required)
      * @param  string $productGroupId (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putProductGroupWithHttpInfo($database, $productGroupId)
+    public function updateProductGroupWithHttpInfo($database, $productGroupId, $productGroup = null)
     {
-        $request = $this->putProductGroupRequest($database, $productGroupId);
+        $request = $this->updateProductGroupRequest($database, $productGroupId, $productGroup);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1025,19 +1035,20 @@ class ProductGroupApi
     }
 
     /**
-     * Operation putProductGroupAsync
+     * Operation updateProductGroupAsync
      *
      * Updates the specified ProductGroup
      *
      * @param  string $database (required)
      * @param  string $productGroupId (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductGroupAsync($database, $productGroupId)
+    public function updateProductGroupAsync($database, $productGroupId, $productGroup = null)
     {
-        return $this->putProductGroupAsyncWithHttpInfo($database, $productGroupId)
+        return $this->updateProductGroupAsyncWithHttpInfo($database, $productGroupId, $productGroup)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1046,20 +1057,21 @@ class ProductGroupApi
     }
 
     /**
-     * Operation putProductGroupAsyncWithHttpInfo
+     * Operation updateProductGroupAsyncWithHttpInfo
      *
      * Updates the specified ProductGroup
      *
      * @param  string $database (required)
      * @param  string $productGroupId (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductGroupAsyncWithHttpInfo($database, $productGroupId)
+    public function updateProductGroupAsyncWithHttpInfo($database, $productGroupId, $productGroup = null)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
-        $request = $this->putProductGroupRequest($database, $productGroupId);
+        $request = $this->updateProductGroupRequest($database, $productGroupId, $productGroup);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1096,26 +1108,27 @@ class ProductGroupApi
     }
 
     /**
-     * Create request for operation 'putProductGroup'
+     * Create request for operation 'updateProductGroup'
      *
      * @param  string $database (required)
      * @param  string $productGroupId (required)
+     * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function putProductGroupRequest($database, $productGroupId)
+    protected function updateProductGroupRequest($database, $productGroupId, $productGroup = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling putProductGroup'
+                'Missing the required parameter $database when calling updateProductGroup'
             );
         }
         // verify the required parameter 'productGroupId' is set
         if ($productGroupId === null || (is_array($productGroupId) && count($productGroupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $productGroupId when calling putProductGroup'
+                'Missing the required parameter $productGroupId when calling updateProductGroup'
             );
         }
 
@@ -1146,6 +1159,9 @@ class ProductGroupApi
 
         // body params
         $_tempBody = null;
+        if (isset($productGroup)) {
+            $_tempBody = $productGroup;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1154,7 +1170,7 @@ class ProductGroupApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
 

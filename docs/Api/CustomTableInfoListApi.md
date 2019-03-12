@@ -1,16 +1,16 @@
-# Seacommerce\Unit4\Multivers\Sdk\CustomerNVLApi
+# Seacommerce\Unit4\Multivers\Sdk\CustomTableInfoListApi
 
 All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerNVLBy**](CustomerNVLApi.md#getCustomerNVLBy) | **GET** /api/{database}/CustomerNVL | Gets a name value list of CustomerNVL that matches the specified criteria
+[**getCustomTableInfoListBy**](CustomTableInfoListApi.md#getCustomTableInfoListBy) | **GET** /api/{database}/CustomTableInfoList | Gets a list of CustomTable that matches the specified criteria
 
 
-# **getCustomerNVLBy**
-> object[] getCustomerNVLBy($database)
+# **getCustomTableInfoListBy**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[] getCustomTableInfoListBy($database)
 
-Gets a name value list of CustomerNVL that matches the specified criteria
+Gets a list of CustomTable that matches the specified criteria
 
 ### Example
 ```php
@@ -22,7 +22,7 @@ $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerNVLApi(
+$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomTableInfoListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerNVLApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerNVLBy($database);
+    $result = $apiInstance->getCustomTableInfoListBy($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerNVLApi->getCustomerNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomTableInfoListApi->getCustomTableInfoListBy: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[]**](../Model/CustomTable.md)
 
 ### Authorization
 
