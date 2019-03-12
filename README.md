@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/seacommerce/multivers-sdk.git"
+      "url": "https://github.com/Seacommerce/multivers-sdk-php.git"
     }
   ],
   "require": {
@@ -140,7 +140,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://api.online.unit4.nl/OAuth/Authorize
+- **Authorization URL**: https://api.online.unit4.nl/v110/OAuth/Authorize
 - **Scopes**: 
  - **http://UNIT4.Multivers.API/Web/WebApi/***: Grants access to the entire api.
 
@@ -148,7 +148,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://sandbox.api.online.unit4.nl/OAuth/Authorize
+- **Authorization URL**: https://sandbox.api.online.unit4.nl/v110/OAuth/Authorize
 - **Scopes**: 
  - **http://UNIT4.Multivers.API/Web/WebApi/***: Grants access to the entire api.
 
