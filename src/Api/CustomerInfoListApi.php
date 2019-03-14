@@ -88,7 +88,7 @@ class CustomerInfoListApi
     }
 
     /**
-     * Operation getCustomerInfoListBy
+     * Operation getCustomerInfoList
      *
      * Gets a list of CustomerInfo that matches the specified criteria
      *
@@ -98,14 +98,14 @@ class CustomerInfoListApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerInfo[]
      */
-    public function getCustomerInfoListBy($database)
+    public function getCustomerInfoList($database)
     {
-        list($response) = $this->getCustomerInfoListByWithHttpInfo($database);
+        list($response) = $this->getCustomerInfoListWithHttpInfo($database);
         return $response;
     }
 
     /**
-     * Operation getCustomerInfoListByWithHttpInfo
+     * Operation getCustomerInfoListWithHttpInfo
      *
      * Gets a list of CustomerInfo that matches the specified criteria
      *
@@ -115,9 +115,9 @@ class CustomerInfoListApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerInfo[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerInfoListByWithHttpInfo($database)
+    public function getCustomerInfoListWithHttpInfo($database)
     {
-        $request = $this->getCustomerInfoListByRequest($database);
+        $request = $this->getCustomerInfoListRequest($database);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class CustomerInfoListApi
     }
 
     /**
-     * Operation getCustomerInfoListByAsync
+     * Operation getCustomerInfoListAsync
      *
      * Gets a list of CustomerInfo that matches the specified criteria
      *
@@ -202,9 +202,9 @@ class CustomerInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerInfoListByAsync($database)
+    public function getCustomerInfoListAsync($database)
     {
-        return $this->getCustomerInfoListByAsyncWithHttpInfo($database)
+        return $this->getCustomerInfoListAsyncWithHttpInfo($database)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -213,7 +213,7 @@ class CustomerInfoListApi
     }
 
     /**
-     * Operation getCustomerInfoListByAsyncWithHttpInfo
+     * Operation getCustomerInfoListAsyncWithHttpInfo
      *
      * Gets a list of CustomerInfo that matches the specified criteria
      *
@@ -222,10 +222,10 @@ class CustomerInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerInfoListByAsyncWithHttpInfo($database)
+    public function getCustomerInfoListAsyncWithHttpInfo($database)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerInfo[]';
-        $request = $this->getCustomerInfoListByRequest($database);
+        $request = $this->getCustomerInfoListRequest($database);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,19 +262,19 @@ class CustomerInfoListApi
     }
 
     /**
-     * Create request for operation 'getCustomerInfoListBy'
+     * Create request for operation 'getCustomerInfoList'
      *
      * @param  string $database (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerInfoListByRequest($database)
+    protected function getCustomerInfoListRequest($database)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getCustomerInfoListBy'
+                'Missing the required parameter $database when calling getCustomerInfoList'
             );
         }
 

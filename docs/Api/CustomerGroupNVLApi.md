@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerGroupNVLBy**](CustomerGroupNVLApi.md#getCustomerGroupNVLBy) | **GET** /api/{database}/CustomerGroupNVL | Gets a name value list of CustomerGroupNVL that matches the specified criteria
+[**getCustomerGroupNVL**](CustomerGroupNVLApi.md#getCustomerGroupNVL) | **GET** /api/{database}/CustomerGroupNVL | Gets a name value list of CustomerGroupNVL that matches the specified criteria
 
 
-# **getCustomerGroupNVLBy**
-> object[] getCustomerGroupNVLBy($database, $fiscalYear)
+# **getCustomerGroupNVL**
+> object[] getCustomerGroupNVL($database, $fiscalYear)
 
 Gets a name value list of CustomerGroupNVL that matches the specified criteria
 
@@ -32,10 +32,10 @@ $database = 'database_example'; // string |
 $fiscalYear = 'fiscalYear_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerGroupNVLBy($database, $fiscalYear);
+    $result = $apiInstance->getCustomerGroupNVL($database, $fiscalYear);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerGroupNVLApi->getCustomerGroupNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerGroupNVLApi->getCustomerGroupNVL: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -88,7 +88,7 @@ class CustomTableInfoListApi
     }
 
     /**
-     * Operation getCustomTableInfoListBy
+     * Operation getCustomTableInfoList
      *
      * Gets a list of CustomTable that matches the specified criteria
      *
@@ -98,14 +98,14 @@ class CustomTableInfoListApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[]
      */
-    public function getCustomTableInfoListBy($database)
+    public function getCustomTableInfoList($database)
     {
-        list($response) = $this->getCustomTableInfoListByWithHttpInfo($database);
+        list($response) = $this->getCustomTableInfoListWithHttpInfo($database);
         return $response;
     }
 
     /**
-     * Operation getCustomTableInfoListByWithHttpInfo
+     * Operation getCustomTableInfoListWithHttpInfo
      *
      * Gets a list of CustomTable that matches the specified criteria
      *
@@ -115,9 +115,9 @@ class CustomTableInfoListApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomTableInfoListByWithHttpInfo($database)
+    public function getCustomTableInfoListWithHttpInfo($database)
     {
-        $request = $this->getCustomTableInfoListByRequest($database);
+        $request = $this->getCustomTableInfoListRequest($database);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class CustomTableInfoListApi
     }
 
     /**
-     * Operation getCustomTableInfoListByAsync
+     * Operation getCustomTableInfoListAsync
      *
      * Gets a list of CustomTable that matches the specified criteria
      *
@@ -202,9 +202,9 @@ class CustomTableInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomTableInfoListByAsync($database)
+    public function getCustomTableInfoListAsync($database)
     {
-        return $this->getCustomTableInfoListByAsyncWithHttpInfo($database)
+        return $this->getCustomTableInfoListAsyncWithHttpInfo($database)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -213,7 +213,7 @@ class CustomTableInfoListApi
     }
 
     /**
-     * Operation getCustomTableInfoListByAsyncWithHttpInfo
+     * Operation getCustomTableInfoListAsyncWithHttpInfo
      *
      * Gets a list of CustomTable that matches the specified criteria
      *
@@ -222,10 +222,10 @@ class CustomTableInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomTableInfoListByAsyncWithHttpInfo($database)
+    public function getCustomTableInfoListAsyncWithHttpInfo($database)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[]';
-        $request = $this->getCustomTableInfoListByRequest($database);
+        $request = $this->getCustomTableInfoListRequest($database);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,19 +262,19 @@ class CustomTableInfoListApi
     }
 
     /**
-     * Create request for operation 'getCustomTableInfoListBy'
+     * Create request for operation 'getCustomTableInfoList'
      *
      * @param  string $database (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomTableInfoListByRequest($database)
+    protected function getCustomTableInfoListRequest($database)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getCustomTableInfoListBy'
+                'Missing the required parameter $database when calling getCustomTableInfoList'
             );
         }
 

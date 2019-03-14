@@ -1,16 +1,16 @@
-# Seacommerce\Unit4\Multivers\Sdk\ProductNVLApi
+# Seacommerce\Unit4\Multivers\Sdk\ProductInfoListApi
 
 All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductNVL**](ProductNVLApi.md#getProductNVL) | **GET** /api/{database}/ProductNVL | Gets a name value list of ProductNVL that matches the specified criteria
+[**getProductInfoList**](ProductInfoListApi.md#getProductInfoList) | **GET** /api/{database}/ProductInfoList | Gets a list of ProductInfo that matches the specified criteria
 
 
-# **getProductNVL**
-> object[] getProductNVL($database)
+# **getProductInfoList**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo[] getProductInfoList($database, $productId, $shortName, $description, $productGroupId)
 
-Gets a name value list of ProductNVL that matches the specified criteria
+Gets a list of ProductInfo that matches the specified criteria
 
 ### Example
 ```php
@@ -22,19 +22,23 @@ $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductNVLApi(
+$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductInfoListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $database = 'database_example'; // string | 
+$productId = 'productId_example'; // string | 
+$shortName = 'shortName_example'; // string | 
+$description = 'description_example'; // string | 
+$productGroupId = 'productGroupId_example'; // string | 
 
 try {
-    $result = $apiInstance->getProductNVL($database);
+    $result = $apiInstance->getProductInfoList($database, $productId, $shortName, $description, $productGroupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductNVLApi->getProductNVL: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductInfoListApi->getProductInfoList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -44,10 +48,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
+ **productId** | **string**|  | [optional]
+ **shortName** | **string**|  | [optional]
+ **description** | **string**|  | [optional]
+ **productGroupId** | **string**|  | [optional]
 
 ### Return type
 
-**object[]**
+[**\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo[]**](../Model/ProductInfo.md)
 
 ### Authorization
 

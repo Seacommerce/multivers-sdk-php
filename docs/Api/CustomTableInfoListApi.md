@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomTableInfoListBy**](CustomTableInfoListApi.md#getCustomTableInfoListBy) | **GET** /api/{database}/CustomTableInfoList | Gets a list of CustomTable that matches the specified criteria
+[**getCustomTableInfoList**](CustomTableInfoListApi.md#getCustomTableInfoList) | **GET** /api/{database}/CustomTableInfoList | Gets a list of CustomTable that matches the specified criteria
 
 
-# **getCustomTableInfoListBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[] getCustomTableInfoListBy($database)
+# **getCustomTableInfoList**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomTable[] getCustomTableInfoList($database)
 
 Gets a list of CustomTable that matches the specified criteria
 
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomTableInfoListApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomTableInfoListBy($database);
+    $result = $apiInstance->getCustomTableInfoList($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomTableInfoListApi->getCustomTableInfoListBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomTableInfoListApi->getCustomTableInfoList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

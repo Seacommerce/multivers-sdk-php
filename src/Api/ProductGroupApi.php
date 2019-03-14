@@ -88,7 +88,7 @@ class ProductGroupApi
     }
 
     /**
-     * Operation createProductGroupBy
+     * Operation createProductGroup
      *
      * Creates a new ProductGroup with the specified values
      *
@@ -99,14 +99,14 @@ class ProductGroupApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup
      */
-    public function createProductGroupBy($database, $productGroup = null)
+    public function createProductGroup($database, $productGroup = null)
     {
-        list($response) = $this->createProductGroupByWithHttpInfo($database, $productGroup);
+        list($response) = $this->createProductGroupWithHttpInfo($database, $productGroup);
         return $response;
     }
 
     /**
-     * Operation createProductGroupByWithHttpInfo
+     * Operation createProductGroupWithHttpInfo
      *
      * Creates a new ProductGroup with the specified values
      *
@@ -117,9 +117,9 @@ class ProductGroupApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createProductGroupByWithHttpInfo($database, $productGroup = null)
+    public function createProductGroupWithHttpInfo($database, $productGroup = null)
     {
-        $request = $this->createProductGroupByRequest($database, $productGroup);
+        $request = $this->createProductGroupRequest($database, $productGroup);
 
         try {
             $options = $this->createHttpClientOption();
@@ -195,7 +195,7 @@ class ProductGroupApi
     }
 
     /**
-     * Operation createProductGroupByAsync
+     * Operation createProductGroupAsync
      *
      * Creates a new ProductGroup with the specified values
      *
@@ -205,9 +205,9 @@ class ProductGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductGroupByAsync($database, $productGroup = null)
+    public function createProductGroupAsync($database, $productGroup = null)
     {
-        return $this->createProductGroupByAsyncWithHttpInfo($database, $productGroup)
+        return $this->createProductGroupAsyncWithHttpInfo($database, $productGroup)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -216,7 +216,7 @@ class ProductGroupApi
     }
 
     /**
-     * Operation createProductGroupByAsyncWithHttpInfo
+     * Operation createProductGroupAsyncWithHttpInfo
      *
      * Creates a new ProductGroup with the specified values
      *
@@ -226,10 +226,10 @@ class ProductGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductGroupByAsyncWithHttpInfo($database, $productGroup = null)
+    public function createProductGroupAsyncWithHttpInfo($database, $productGroup = null)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup';
-        $request = $this->createProductGroupByRequest($database, $productGroup);
+        $request = $this->createProductGroupRequest($database, $productGroup);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -266,7 +266,7 @@ class ProductGroupApi
     }
 
     /**
-     * Create request for operation 'createProductGroupBy'
+     * Create request for operation 'createProductGroup'
      *
      * @param  string $database (required)
      * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup $productGroup (optional)
@@ -274,12 +274,12 @@ class ProductGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createProductGroupByRequest($database, $productGroup = null)
+    protected function createProductGroupRequest($database, $productGroup = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling createProductGroupBy'
+                'Missing the required parameter $database when calling createProductGroup'
             );
         }
 

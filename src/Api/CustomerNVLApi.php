@@ -88,7 +88,7 @@ class CustomerNVLApi
     }
 
     /**
-     * Operation getCustomerNVLBy
+     * Operation getCustomerNVL
      *
      * Gets a name value list of CustomerNVL that matches the specified criteria
      *
@@ -98,14 +98,14 @@ class CustomerNVLApi
      * @throws \InvalidArgumentException
      * @return object[]
      */
-    public function getCustomerNVLBy($database)
+    public function getCustomerNVL($database)
     {
-        list($response) = $this->getCustomerNVLByWithHttpInfo($database);
+        list($response) = $this->getCustomerNVLWithHttpInfo($database);
         return $response;
     }
 
     /**
-     * Operation getCustomerNVLByWithHttpInfo
+     * Operation getCustomerNVLWithHttpInfo
      *
      * Gets a name value list of CustomerNVL that matches the specified criteria
      *
@@ -115,9 +115,9 @@ class CustomerNVLApi
      * @throws \InvalidArgumentException
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerNVLByWithHttpInfo($database)
+    public function getCustomerNVLWithHttpInfo($database)
     {
-        $request = $this->getCustomerNVLByRequest($database);
+        $request = $this->getCustomerNVLRequest($database);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class CustomerNVLApi
     }
 
     /**
-     * Operation getCustomerNVLByAsync
+     * Operation getCustomerNVLAsync
      *
      * Gets a name value list of CustomerNVL that matches the specified criteria
      *
@@ -202,9 +202,9 @@ class CustomerNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerNVLByAsync($database)
+    public function getCustomerNVLAsync($database)
     {
-        return $this->getCustomerNVLByAsyncWithHttpInfo($database)
+        return $this->getCustomerNVLAsyncWithHttpInfo($database)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -213,7 +213,7 @@ class CustomerNVLApi
     }
 
     /**
-     * Operation getCustomerNVLByAsyncWithHttpInfo
+     * Operation getCustomerNVLAsyncWithHttpInfo
      *
      * Gets a name value list of CustomerNVL that matches the specified criteria
      *
@@ -222,10 +222,10 @@ class CustomerNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerNVLByAsyncWithHttpInfo($database)
+    public function getCustomerNVLAsyncWithHttpInfo($database)
     {
         $returnType = 'object[]';
-        $request = $this->getCustomerNVLByRequest($database);
+        $request = $this->getCustomerNVLRequest($database);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,19 +262,19 @@ class CustomerNVLApi
     }
 
     /**
-     * Create request for operation 'getCustomerNVLBy'
+     * Create request for operation 'getCustomerNVL'
      *
      * @param  string $database (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerNVLByRequest($database)
+    protected function getCustomerNVLRequest($database)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getCustomerNVLBy'
+                'Missing the required parameter $database when calling getCustomerNVL'
             );
         }
 

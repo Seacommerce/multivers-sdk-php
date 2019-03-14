@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerInfoListBy**](CustomerInfoListApi.md#getCustomerInfoListBy) | **GET** /api/{database}/CustomerInfoList | Gets a list of CustomerInfo that matches the specified criteria
+[**getCustomerInfoList**](CustomerInfoListApi.md#getCustomerInfoList) | **GET** /api/{database}/CustomerInfoList | Gets a list of CustomerInfo that matches the specified criteria
 
 
-# **getCustomerInfoListBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerInfo[] getCustomerInfoListBy($database)
+# **getCustomerInfoList**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerInfo[] getCustomerInfoList($database)
 
 Gets a list of CustomerInfo that matches the specified criteria
 
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerInfoListApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerInfoListBy($database);
+    $result = $apiInstance->getCustomerInfoList($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerInfoListApi->getCustomerInfoListBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerInfoListApi->getCustomerInfoList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

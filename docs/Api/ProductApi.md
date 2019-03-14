@@ -4,14 +4,14 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProductBy**](ProductApi.md#createProductBy) | **POST** /api/{database}/Product | Creates a new Product with the specified values
+[**createProduct**](ProductApi.md#createProduct) | **POST** /api/{database}/Product | Creates a new Product with the specified values
 [**deleteProduct**](ProductApi.md#deleteProduct) | **DELETE** /api/{database}/Product/{productId} | Deletes the specified Product
 [**getProduct**](ProductApi.md#getProduct) | **GET** /api/{database}/Product/{productId} | Gets the specified Product.
 [**updateProduct**](ProductApi.md#updateProduct) | **PUT** /api/{database}/Product/{productId} | Updates the specified Product
 
 
-# **createProductBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\Product createProductBy($database, $product)
+# **createProduct**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\Product createProduct($database, $product)
 
 Creates a new Product with the specified values
 
@@ -35,10 +35,10 @@ $database = 'database_example'; // string |
 $product = new \Seacommerce\Unit4\Multivers\Sdk\Model\Product(); // \Seacommerce\Unit4\Multivers\Sdk\Model\Product | 
 
 try {
-    $result = $apiInstance->createProductBy($database, $product);
+    $result = $apiInstance->createProduct($database, $product);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->createProductBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductApi->createProduct: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

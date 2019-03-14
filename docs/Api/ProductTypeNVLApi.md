@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductTypeNVLBy**](ProductTypeNVLApi.md#getProductTypeNVLBy) | **GET** /api/{database}/ProductTypeNVL | Gets a name value list of ProductTypeNVL that matches the specified criteria
+[**getProductTypeNVL**](ProductTypeNVLApi.md#getProductTypeNVL) | **GET** /api/{database}/ProductTypeNVL | Gets a name value list of ProductTypeNVL that matches the specified criteria
 
 
-# **getProductTypeNVLBy**
-> object[] getProductTypeNVLBy($database)
+# **getProductTypeNVL**
+> object[] getProductTypeNVL($database)
 
 Gets a name value list of ProductTypeNVL that matches the specified criteria
 
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductTypeNVLApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getProductTypeNVLBy($database);
+    $result = $apiInstance->getProductTypeNVL($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductTypeNVLApi->getProductTypeNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductTypeNVLApi->getProductTypeNVL: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

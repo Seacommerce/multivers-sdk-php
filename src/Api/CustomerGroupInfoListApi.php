@@ -88,7 +88,7 @@ class CustomerGroupInfoListApi
     }
 
     /**
-     * Operation getCustomerGroupInfoListBy
+     * Operation getCustomerGroupInfoList
      *
      * Gets a list of CustomerGroupInfo that matches the specified criteria
      *
@@ -99,14 +99,14 @@ class CustomerGroupInfoListApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[]
      */
-    public function getCustomerGroupInfoListBy($database, $fiscalYear = null)
+    public function getCustomerGroupInfoList($database, $fiscalYear = null)
     {
-        list($response) = $this->getCustomerGroupInfoListByWithHttpInfo($database, $fiscalYear);
+        list($response) = $this->getCustomerGroupInfoListWithHttpInfo($database, $fiscalYear);
         return $response;
     }
 
     /**
-     * Operation getCustomerGroupInfoListByWithHttpInfo
+     * Operation getCustomerGroupInfoListWithHttpInfo
      *
      * Gets a list of CustomerGroupInfo that matches the specified criteria
      *
@@ -117,9 +117,9 @@ class CustomerGroupInfoListApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerGroupInfoListByWithHttpInfo($database, $fiscalYear = null)
+    public function getCustomerGroupInfoListWithHttpInfo($database, $fiscalYear = null)
     {
-        $request = $this->getCustomerGroupInfoListByRequest($database, $fiscalYear);
+        $request = $this->getCustomerGroupInfoListRequest($database, $fiscalYear);
 
         try {
             $options = $this->createHttpClientOption();
@@ -195,7 +195,7 @@ class CustomerGroupInfoListApi
     }
 
     /**
-     * Operation getCustomerGroupInfoListByAsync
+     * Operation getCustomerGroupInfoListAsync
      *
      * Gets a list of CustomerGroupInfo that matches the specified criteria
      *
@@ -205,9 +205,9 @@ class CustomerGroupInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerGroupInfoListByAsync($database, $fiscalYear = null)
+    public function getCustomerGroupInfoListAsync($database, $fiscalYear = null)
     {
-        return $this->getCustomerGroupInfoListByAsyncWithHttpInfo($database, $fiscalYear)
+        return $this->getCustomerGroupInfoListAsyncWithHttpInfo($database, $fiscalYear)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -216,7 +216,7 @@ class CustomerGroupInfoListApi
     }
 
     /**
-     * Operation getCustomerGroupInfoListByAsyncWithHttpInfo
+     * Operation getCustomerGroupInfoListAsyncWithHttpInfo
      *
      * Gets a list of CustomerGroupInfo that matches the specified criteria
      *
@@ -226,10 +226,10 @@ class CustomerGroupInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerGroupInfoListByAsyncWithHttpInfo($database, $fiscalYear = null)
+    public function getCustomerGroupInfoListAsyncWithHttpInfo($database, $fiscalYear = null)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[]';
-        $request = $this->getCustomerGroupInfoListByRequest($database, $fiscalYear);
+        $request = $this->getCustomerGroupInfoListRequest($database, $fiscalYear);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -266,7 +266,7 @@ class CustomerGroupInfoListApi
     }
 
     /**
-     * Create request for operation 'getCustomerGroupInfoListBy'
+     * Create request for operation 'getCustomerGroupInfoList'
      *
      * @param  string $database (required)
      * @param  string $fiscalYear (optional)
@@ -274,12 +274,12 @@ class CustomerGroupInfoListApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerGroupInfoListByRequest($database, $fiscalYear = null)
+    protected function getCustomerGroupInfoListRequest($database, $fiscalYear = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getCustomerGroupInfoListBy'
+                'Missing the required parameter $database when calling getCustomerGroupInfoList'
             );
         }
 
