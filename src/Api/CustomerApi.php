@@ -88,7 +88,7 @@ class CustomerApi
     }
 
     /**
-     * Operation createCustomerBy
+     * Operation createCustomer
      *
      * Creates a new Customer with the specified values
      *
@@ -99,14 +99,14 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\Customer
      */
-    public function createCustomerBy($database, $customer = null)
+    public function createCustomer($database, $customer = null)
     {
-        list($response) = $this->createCustomerByWithHttpInfo($database, $customer);
+        list($response) = $this->createCustomerWithHttpInfo($database, $customer);
         return $response;
     }
 
     /**
-     * Operation createCustomerByWithHttpInfo
+     * Operation createCustomerWithHttpInfo
      *
      * Creates a new Customer with the specified values
      *
@@ -117,9 +117,9 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomerByWithHttpInfo($database, $customer = null)
+    public function createCustomerWithHttpInfo($database, $customer = null)
     {
-        $request = $this->createCustomerByRequest($database, $customer);
+        $request = $this->createCustomerRequest($database, $customer);
 
         try {
             $options = $this->createHttpClientOption();
@@ -195,7 +195,7 @@ class CustomerApi
     }
 
     /**
-     * Operation createCustomerByAsync
+     * Operation createCustomerAsync
      *
      * Creates a new Customer with the specified values
      *
@@ -205,9 +205,9 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerByAsync($database, $customer = null)
+    public function createCustomerAsync($database, $customer = null)
     {
-        return $this->createCustomerByAsyncWithHttpInfo($database, $customer)
+        return $this->createCustomerAsyncWithHttpInfo($database, $customer)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -216,7 +216,7 @@ class CustomerApi
     }
 
     /**
-     * Operation createCustomerByAsyncWithHttpInfo
+     * Operation createCustomerAsyncWithHttpInfo
      *
      * Creates a new Customer with the specified values
      *
@@ -226,10 +226,10 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerByAsyncWithHttpInfo($database, $customer = null)
+    public function createCustomerAsyncWithHttpInfo($database, $customer = null)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\Customer';
-        $request = $this->createCustomerByRequest($database, $customer);
+        $request = $this->createCustomerRequest($database, $customer);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -266,7 +266,7 @@ class CustomerApi
     }
 
     /**
-     * Create request for operation 'createCustomerBy'
+     * Create request for operation 'createCustomer'
      *
      * @param  string $database (required)
      * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\Customer $customer (optional)
@@ -274,12 +274,12 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createCustomerByRequest($database, $customer = null)
+    protected function createCustomerRequest($database, $customer = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling createCustomerBy'
+                'Missing the required parameter $database when calling createCustomer'
             );
         }
 

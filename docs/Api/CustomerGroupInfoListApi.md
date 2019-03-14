@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerGroupInfoListBy**](CustomerGroupInfoListApi.md#getCustomerGroupInfoListBy) | **GET** /api/{database}/CustomerGroupInfoList | Gets a list of CustomerGroupInfo that matches the specified criteria
+[**getCustomerGroupInfoList**](CustomerGroupInfoListApi.md#getCustomerGroupInfoList) | **GET** /api/{database}/CustomerGroupInfoList | Gets a list of CustomerGroupInfo that matches the specified criteria
 
 
-# **getCustomerGroupInfoListBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[] getCustomerGroupInfoListBy($database, $fiscalYear)
+# **getCustomerGroupInfoList**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[] getCustomerGroupInfoList($database, $fiscalYear)
 
 Gets a list of CustomerGroupInfo that matches the specified criteria
 
@@ -32,10 +32,10 @@ $database = 'database_example'; // string |
 $fiscalYear = 'fiscalYear_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerGroupInfoListBy($database, $fiscalYear);
+    $result = $apiInstance->getCustomerGroupInfoList($database, $fiscalYear);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerGroupInfoListApi->getCustomerGroupInfoListBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerGroupInfoListApi->getCustomerGroupInfoList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

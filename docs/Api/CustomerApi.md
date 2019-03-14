@@ -4,15 +4,15 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCustomerBy**](CustomerApi.md#createCustomerBy) | **POST** /api/{database}/Customer | Creates a new Customer with the specified values
+[**createCustomer**](CustomerApi.md#createCustomer) | **POST** /api/{database}/Customer | Creates a new Customer with the specified values
 [**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /api/{database}/Customer/{customerId} | Deletes the specified Customer
 [**deleteCustomerAndOrganization**](CustomerApi.md#deleteCustomerAndOrganization) | **DELETE** /api/{database}/Customer/CustomerAndOrganization/{customerId} | Deletes the specified Customer
 [**getCustomer**](CustomerApi.md#getCustomer) | **GET** /api/{database}/Customer/{customerId} | Gets the specified Customer.
 [**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /api/{database}/Customer/{customerId} | Updates the specified Customer
 
 
-# **createCustomerBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\Customer createCustomerBy($database, $customer)
+# **createCustomer**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\Customer createCustomer($database, $customer)
 
 Creates a new Customer with the specified values
 
@@ -36,10 +36,10 @@ $database = 'database_example'; // string |
 $customer = new \Seacommerce\Unit4\Multivers\Sdk\Model\Customer(); // \Seacommerce\Unit4\Multivers\Sdk\Model\Customer | 
 
 try {
-    $result = $apiInstance->createCustomerBy($database, $customer);
+    $result = $apiInstance->createCustomer($database, $customer);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->createCustomerBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->createCustomer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

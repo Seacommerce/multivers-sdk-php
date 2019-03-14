@@ -4,14 +4,14 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProductGroupBy**](ProductGroupApi.md#createProductGroupBy) | **POST** /api/{database}/ProductGroup | Creates a new ProductGroup with the specified values
+[**createProductGroup**](ProductGroupApi.md#createProductGroup) | **POST** /api/{database}/ProductGroup | Creates a new ProductGroup with the specified values
 [**deleteProductGroup**](ProductGroupApi.md#deleteProductGroup) | **DELETE** /api/{database}/ProductGroup/{productGroupId} | Deletes the specified ProductGroup
 [**getProductGroup**](ProductGroupApi.md#getProductGroup) | **GET** /api/{database}/ProductGroup/{productGroupId} | Gets the specified ProductGroup.
 [**updateProductGroup**](ProductGroupApi.md#updateProductGroup) | **PUT** /api/{database}/ProductGroup/{productGroupId} | Updates the specified ProductGroup
 
 
-# **createProductGroupBy**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup createProductGroupBy($database, $productGroup)
+# **createProductGroup**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup createProductGroup($database, $productGroup)
 
 Creates a new ProductGroup with the specified values
 
@@ -35,10 +35,10 @@ $database = 'database_example'; // string |
 $productGroup = new \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup(); // \Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroup | 
 
 try {
-    $result = $apiInstance->createProductGroupBy($database, $productGroup);
+    $result = $apiInstance->createProductGroup($database, $productGroup);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductGroupApi->createProductGroupBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductGroupApi->createProductGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

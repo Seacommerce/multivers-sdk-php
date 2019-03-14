@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductGroupNVLBy**](ProductGroupNVLApi.md#getProductGroupNVLBy) | **GET** /api/{database}/ProductGroupNVL | Gets a name value list of ProductGroupNVL that matches the specified criteria
+[**getProductGroupNVL**](ProductGroupNVLApi.md#getProductGroupNVL) | **GET** /api/{database}/ProductGroupNVL | Gets a name value list of ProductGroupNVL that matches the specified criteria
 
 
-# **getProductGroupNVLBy**
-> object[] getProductGroupNVLBy($database)
+# **getProductGroupNVL**
+> object[] getProductGroupNVL($database)
 
 Gets a name value list of ProductGroupNVL that matches the specified criteria
 
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductGroupNVLApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getProductGroupNVLBy($database);
+    $result = $apiInstance->getProductGroupNVL($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductGroupNVLApi->getProductGroupNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductGroupNVLApi->getProductGroupNVL: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

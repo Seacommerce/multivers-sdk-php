@@ -4,11 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerNVLBy**](CustomerNVLApi.md#getCustomerNVLBy) | **GET** /api/{database}/CustomerNVL | Gets a name value list of CustomerNVL that matches the specified criteria
+[**getCustomerNVL**](CustomerNVLApi.md#getCustomerNVL) | **GET** /api/{database}/CustomerNVL | Gets a name value list of CustomerNVL that matches the specified criteria
 
 
-# **getCustomerNVLBy**
-> object[] getCustomerNVLBy($database)
+# **getCustomerNVL**
+> object[] getCustomerNVL($database)
 
 Gets a name value list of CustomerNVL that matches the specified criteria
 
@@ -31,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerNVLApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerNVLBy($database);
+    $result = $apiInstance->getCustomerNVL($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerNVLApi->getCustomerNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerNVLApi->getCustomerNVL: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

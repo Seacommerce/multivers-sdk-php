@@ -88,7 +88,7 @@ class ProductGroupNVLApi
     }
 
     /**
-     * Operation getProductGroupNVLBy
+     * Operation getProductGroupNVL
      *
      * Gets a name value list of ProductGroupNVL that matches the specified criteria
      *
@@ -98,14 +98,14 @@ class ProductGroupNVLApi
      * @throws \InvalidArgumentException
      * @return object[]
      */
-    public function getProductGroupNVLBy($database)
+    public function getProductGroupNVL($database)
     {
-        list($response) = $this->getProductGroupNVLByWithHttpInfo($database);
+        list($response) = $this->getProductGroupNVLWithHttpInfo($database);
         return $response;
     }
 
     /**
-     * Operation getProductGroupNVLByWithHttpInfo
+     * Operation getProductGroupNVLWithHttpInfo
      *
      * Gets a name value list of ProductGroupNVL that matches the specified criteria
      *
@@ -115,9 +115,9 @@ class ProductGroupNVLApi
      * @throws \InvalidArgumentException
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductGroupNVLByWithHttpInfo($database)
+    public function getProductGroupNVLWithHttpInfo($database)
     {
-        $request = $this->getProductGroupNVLByRequest($database);
+        $request = $this->getProductGroupNVLRequest($database);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class ProductGroupNVLApi
     }
 
     /**
-     * Operation getProductGroupNVLByAsync
+     * Operation getProductGroupNVLAsync
      *
      * Gets a name value list of ProductGroupNVL that matches the specified criteria
      *
@@ -202,9 +202,9 @@ class ProductGroupNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupNVLByAsync($database)
+    public function getProductGroupNVLAsync($database)
     {
-        return $this->getProductGroupNVLByAsyncWithHttpInfo($database)
+        return $this->getProductGroupNVLAsyncWithHttpInfo($database)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -213,7 +213,7 @@ class ProductGroupNVLApi
     }
 
     /**
-     * Operation getProductGroupNVLByAsyncWithHttpInfo
+     * Operation getProductGroupNVLAsyncWithHttpInfo
      *
      * Gets a name value list of ProductGroupNVL that matches the specified criteria
      *
@@ -222,10 +222,10 @@ class ProductGroupNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupNVLByAsyncWithHttpInfo($database)
+    public function getProductGroupNVLAsyncWithHttpInfo($database)
     {
         $returnType = 'object[]';
-        $request = $this->getProductGroupNVLByRequest($database);
+        $request = $this->getProductGroupNVLRequest($database);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,19 +262,19 @@ class ProductGroupNVLApi
     }
 
     /**
-     * Create request for operation 'getProductGroupNVLBy'
+     * Create request for operation 'getProductGroupNVL'
      *
      * @param  string $database (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductGroupNVLByRequest($database)
+    protected function getProductGroupNVLRequest($database)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getProductGroupNVLBy'
+                'Missing the required parameter $database when calling getProductGroupNVL'
             );
         }
 

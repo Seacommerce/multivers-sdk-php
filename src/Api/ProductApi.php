@@ -88,7 +88,7 @@ class ProductApi
     }
 
     /**
-     * Operation createProductBy
+     * Operation createProduct
      *
      * Creates a new Product with the specified values
      *
@@ -99,14 +99,14 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \Seacommerce\Unit4\Multivers\Sdk\Model\Product
      */
-    public function createProductBy($database, $product = null)
+    public function createProduct($database, $product = null)
     {
-        list($response) = $this->createProductByWithHttpInfo($database, $product);
+        list($response) = $this->createProductWithHttpInfo($database, $product);
         return $response;
     }
 
     /**
-     * Operation createProductByWithHttpInfo
+     * Operation createProductWithHttpInfo
      *
      * Creates a new Product with the specified values
      *
@@ -117,9 +117,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\Product, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createProductByWithHttpInfo($database, $product = null)
+    public function createProductWithHttpInfo($database, $product = null)
     {
-        $request = $this->createProductByRequest($database, $product);
+        $request = $this->createProductRequest($database, $product);
 
         try {
             $options = $this->createHttpClientOption();
@@ -195,7 +195,7 @@ class ProductApi
     }
 
     /**
-     * Operation createProductByAsync
+     * Operation createProductAsync
      *
      * Creates a new Product with the specified values
      *
@@ -205,9 +205,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductByAsync($database, $product = null)
+    public function createProductAsync($database, $product = null)
     {
-        return $this->createProductByAsyncWithHttpInfo($database, $product)
+        return $this->createProductAsyncWithHttpInfo($database, $product)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -216,7 +216,7 @@ class ProductApi
     }
 
     /**
-     * Operation createProductByAsyncWithHttpInfo
+     * Operation createProductAsyncWithHttpInfo
      *
      * Creates a new Product with the specified values
      *
@@ -226,10 +226,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductByAsyncWithHttpInfo($database, $product = null)
+    public function createProductAsyncWithHttpInfo($database, $product = null)
     {
         $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\Product';
-        $request = $this->createProductByRequest($database, $product);
+        $request = $this->createProductRequest($database, $product);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -266,7 +266,7 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'createProductBy'
+     * Create request for operation 'createProduct'
      *
      * @param  string $database (required)
      * @param  \Seacommerce\Unit4\Multivers\Sdk\Model\Product $product (optional)
@@ -274,12 +274,12 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createProductByRequest($database, $product = null)
+    protected function createProductRequest($database, $product = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling createProductBy'
+                'Missing the required parameter $database when calling createProduct'
             );
         }
 

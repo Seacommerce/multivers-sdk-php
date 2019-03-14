@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductNVLApi
+ * ProductInfoApi
  * PHP version 5
  *
  * @category Class
@@ -40,14 +40,14 @@ use Seacommerce\Unit4\Multivers\Sdk\HeaderSelector;
 use Seacommerce\Unit4\Multivers\Sdk\ObjectSerializer;
 
 /**
- * ProductNVLApi Class Doc Comment
+ * ProductInfoApi Class Doc Comment
  *
  * @category Class
  * @package  Seacommerce\Unit4\Multivers\Sdk
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class ProductNVLApi
+class ProductInfoApi
 {
     /**
      * @var ClientInterface
@@ -88,36 +88,38 @@ class ProductNVLApi
     }
 
     /**
-     * Operation getProductNVL
+     * Operation getProductInfoByProductId
      *
-     * Gets a name value list of ProductNVL that matches the specified criteria
+     * Gets the specified ProductInfo.
      *
      * @param  string $database database (required)
+     * @param  string $productId productId (required)
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object[]
+     * @return \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo
      */
-    public function getProductNVL($database)
+    public function getProductInfoByProductId($database, $productId)
     {
-        list($response) = $this->getProductNVLWithHttpInfo($database);
+        list($response) = $this->getProductInfoByProductIdWithHttpInfo($database, $productId);
         return $response;
     }
 
     /**
-     * Operation getProductNVLWithHttpInfo
+     * Operation getProductInfoByProductIdWithHttpInfo
      *
-     * Gets a name value list of ProductNVL that matches the specified criteria
+     * Gets the specified ProductInfo.
      *
      * @param  string $database (required)
+     * @param  string $productId (required)
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductNVLWithHttpInfo($database)
+    public function getProductInfoByProductIdWithHttpInfo($database, $productId)
     {
-        $request = $this->getProductNVLRequest($database);
+        $request = $this->getProductInfoByProductIdRequest($database, $productId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -150,20 +152,20 @@ class ProductNVLApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('object[]' === '\SplFileObject') {
+                    if ('\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object[]', []),
+                        ObjectSerializer::deserialize($content, '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = 'object[]';
+            $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -182,7 +184,7 @@ class ProductNVLApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object[]',
+                        '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,18 +195,19 @@ class ProductNVLApi
     }
 
     /**
-     * Operation getProductNVLAsync
+     * Operation getProductInfoByProductIdAsync
      *
-     * Gets a name value list of ProductNVL that matches the specified criteria
+     * Gets the specified ProductInfo.
      *
      * @param  string $database (required)
+     * @param  string $productId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductNVLAsync($database)
+    public function getProductInfoByProductIdAsync($database, $productId)
     {
-        return $this->getProductNVLAsyncWithHttpInfo($database)
+        return $this->getProductInfoByProductIdAsyncWithHttpInfo($database, $productId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -213,19 +216,20 @@ class ProductNVLApi
     }
 
     /**
-     * Operation getProductNVLAsyncWithHttpInfo
+     * Operation getProductInfoByProductIdAsyncWithHttpInfo
      *
-     * Gets a name value list of ProductNVL that matches the specified criteria
+     * Gets the specified ProductInfo.
      *
      * @param  string $database (required)
+     * @param  string $productId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductNVLAsyncWithHttpInfo($database)
+    public function getProductInfoByProductIdAsyncWithHttpInfo($database, $productId)
     {
-        $returnType = 'object[]';
-        $request = $this->getProductNVLRequest($database);
+        $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo';
+        $request = $this->getProductInfoByProductIdRequest($database, $productId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,23 +266,30 @@ class ProductNVLApi
     }
 
     /**
-     * Create request for operation 'getProductNVL'
+     * Create request for operation 'getProductInfoByProductId'
      *
      * @param  string $database (required)
+     * @param  string $productId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductNVLRequest($database)
+    protected function getProductInfoByProductIdRequest($database, $productId)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getProductNVL'
+                'Missing the required parameter $database when calling getProductInfoByProductId'
+            );
+        }
+        // verify the required parameter 'productId' is set
+        if ($productId === null || (is_array($productId) && count($productId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $productId when calling getProductInfoByProductId'
             );
         }
 
-        $resourcePath = '/api/{database}/ProductNVL';
+        $resourcePath = '/api/{database}/ProductInfo/{productId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -291,6 +302,14 @@ class ProductNVLApi
             $resourcePath = str_replace(
                 '{' . 'database' . '}',
                 ObjectSerializer::toPathValue($database),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($productId !== null) {
+            $resourcePath = str_replace(
+                '{' . 'productId' . '}',
+                ObjectSerializer::toPathValue($productId),
                 $resourcePath
             );
         }

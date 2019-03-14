@@ -88,7 +88,7 @@ class CustomerGroupNVLApi
     }
 
     /**
-     * Operation getCustomerGroupNVLBy
+     * Operation getCustomerGroupNVL
      *
      * Gets a name value list of CustomerGroupNVL that matches the specified criteria
      *
@@ -99,14 +99,14 @@ class CustomerGroupNVLApi
      * @throws \InvalidArgumentException
      * @return object[]
      */
-    public function getCustomerGroupNVLBy($database, $fiscalYear = null)
+    public function getCustomerGroupNVL($database, $fiscalYear = null)
     {
-        list($response) = $this->getCustomerGroupNVLByWithHttpInfo($database, $fiscalYear);
+        list($response) = $this->getCustomerGroupNVLWithHttpInfo($database, $fiscalYear);
         return $response;
     }
 
     /**
-     * Operation getCustomerGroupNVLByWithHttpInfo
+     * Operation getCustomerGroupNVLWithHttpInfo
      *
      * Gets a name value list of CustomerGroupNVL that matches the specified criteria
      *
@@ -117,9 +117,9 @@ class CustomerGroupNVLApi
      * @throws \InvalidArgumentException
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerGroupNVLByWithHttpInfo($database, $fiscalYear = null)
+    public function getCustomerGroupNVLWithHttpInfo($database, $fiscalYear = null)
     {
-        $request = $this->getCustomerGroupNVLByRequest($database, $fiscalYear);
+        $request = $this->getCustomerGroupNVLRequest($database, $fiscalYear);
 
         try {
             $options = $this->createHttpClientOption();
@@ -195,7 +195,7 @@ class CustomerGroupNVLApi
     }
 
     /**
-     * Operation getCustomerGroupNVLByAsync
+     * Operation getCustomerGroupNVLAsync
      *
      * Gets a name value list of CustomerGroupNVL that matches the specified criteria
      *
@@ -205,9 +205,9 @@ class CustomerGroupNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerGroupNVLByAsync($database, $fiscalYear = null)
+    public function getCustomerGroupNVLAsync($database, $fiscalYear = null)
     {
-        return $this->getCustomerGroupNVLByAsyncWithHttpInfo($database, $fiscalYear)
+        return $this->getCustomerGroupNVLAsyncWithHttpInfo($database, $fiscalYear)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -216,7 +216,7 @@ class CustomerGroupNVLApi
     }
 
     /**
-     * Operation getCustomerGroupNVLByAsyncWithHttpInfo
+     * Operation getCustomerGroupNVLAsyncWithHttpInfo
      *
      * Gets a name value list of CustomerGroupNVL that matches the specified criteria
      *
@@ -226,10 +226,10 @@ class CustomerGroupNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerGroupNVLByAsyncWithHttpInfo($database, $fiscalYear = null)
+    public function getCustomerGroupNVLAsyncWithHttpInfo($database, $fiscalYear = null)
     {
         $returnType = 'object[]';
-        $request = $this->getCustomerGroupNVLByRequest($database, $fiscalYear);
+        $request = $this->getCustomerGroupNVLRequest($database, $fiscalYear);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -266,7 +266,7 @@ class CustomerGroupNVLApi
     }
 
     /**
-     * Create request for operation 'getCustomerGroupNVLBy'
+     * Create request for operation 'getCustomerGroupNVL'
      *
      * @param  string $database (required)
      * @param  string $fiscalYear (optional)
@@ -274,12 +274,12 @@ class CustomerGroupNVLApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerGroupNVLByRequest($database, $fiscalYear = null)
+    protected function getCustomerGroupNVLRequest($database, $fiscalYear = null)
     {
         // verify the required parameter 'database' is set
         if ($database === null || (is_array($database) && count($database) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $database when calling getCustomerGroupNVLBy'
+                'Missing the required parameter $database when calling getCustomerGroupNVL'
             );
         }
 

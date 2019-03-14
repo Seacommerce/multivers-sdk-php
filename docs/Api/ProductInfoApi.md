@@ -1,16 +1,16 @@
-# Seacommerce\Unit4\Multivers\Sdk\ProductNVLApi
+# Seacommerce\Unit4\Multivers\Sdk\ProductInfoApi
 
 All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductNVL**](ProductNVLApi.md#getProductNVL) | **GET** /api/{database}/ProductNVL | Gets a name value list of ProductNVL that matches the specified criteria
+[**getProductInfoByProductId**](ProductInfoApi.md#getProductInfoByProductId) | **GET** /api/{database}/ProductInfo/{productId} | Gets the specified ProductInfo.
 
 
-# **getProductNVL**
-> object[] getProductNVL($database)
+# **getProductInfoByProductId**
+> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo getProductInfoByProductId($database, $productId)
 
-Gets a name value list of ProductNVL that matches the specified criteria
+Gets the specified ProductInfo.
 
 ### Example
 ```php
@@ -22,19 +22,20 @@ $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductNVLApi(
+$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductInfoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $database = 'database_example'; // string | 
+$productId = 'productId_example'; // string | 
 
 try {
-    $result = $apiInstance->getProductNVL($database);
+    $result = $apiInstance->getProductInfoByProductId($database, $productId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductNVLApi->getProductNVL: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductInfoApi->getProductInfoByProductId: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -44,10 +45,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
+ **productId** | **string**|  |
 
 ### Return type
 
-**object[]**
+[**\Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo**](../Model/ProductInfo.md)
 
 ### Authorization
 
