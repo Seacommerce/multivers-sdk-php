@@ -57,7 +57,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'customerGroupId' => 'int',
+        'fiscalYear' => 'int',
+        'ledgerAccountId' => 'string'
     ];
 
     /**
@@ -66,7 +68,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        
+        'customerGroupId' => 'int32',
+        'fiscalYear' => 'int32',
+        'ledgerAccountId' => null
     ];
 
     /**
@@ -96,7 +100,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'customerGroupId' => 'customerGroupId',
+        'fiscalYear' => 'fiscalYear',
+        'ledgerAccountId' => 'ledgerAccountId'
     ];
 
     /**
@@ -105,7 +111,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'customerGroupId' => 'setCustomerGroupId',
+        'fiscalYear' => 'setFiscalYear',
+        'ledgerAccountId' => 'setLedgerAccountId'
     ];
 
     /**
@@ -114,7 +122,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'customerGroupId' => 'getCustomerGroupId',
+        'fiscalYear' => 'getFiscalYear',
+        'ledgerAccountId' => 'getLedgerAccountId'
     ];
 
     /**
@@ -177,6 +187,9 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['customerGroupId'] = isset($data['customerGroupId']) ? $data['customerGroupId'] : null;
+        $this->container['fiscalYear'] = isset($data['fiscalYear']) ? $data['fiscalYear'] : null;
+        $this->container['ledgerAccountId'] = isset($data['ledgerAccountId']) ? $data['ledgerAccountId'] : null;
     }
 
     /**
@@ -202,6 +215,78 @@ class CustomerGroupInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets customerGroupId
+     *
+     * @return int|null
+     */
+    public function getCustomerGroupId()
+    {
+        return $this->container['customerGroupId'];
+    }
+
+    /**
+     * Sets customerGroupId
+     *
+     * @param int|null $customerGroupId customerGroupId
+     *
+     * @return $this
+     */
+    public function setCustomerGroupId($customerGroupId)
+    {
+        $this->container['customerGroupId'] = $customerGroupId;
+
+        return $this;
+    }
+
+    /**
+     * Gets fiscalYear
+     *
+     * @return int|null
+     */
+    public function getFiscalYear()
+    {
+        return $this->container['fiscalYear'];
+    }
+
+    /**
+     * Sets fiscalYear
+     *
+     * @param int|null $fiscalYear fiscalYear
+     *
+     * @return $this
+     */
+    public function setFiscalYear($fiscalYear)
+    {
+        $this->container['fiscalYear'] = $fiscalYear;
+
+        return $this;
+    }
+
+    /**
+     * Gets ledgerAccountId
+     *
+     * @return string|null
+     */
+    public function getLedgerAccountId()
+    {
+        return $this->container['ledgerAccountId'];
+    }
+
+    /**
+     * Sets ledgerAccountId
+     *
+     * @param string|null $ledgerAccountId ledgerAccountId
+     *
+     * @return $this
+     */
+    public function setLedgerAccountId($ledgerAccountId)
+    {
+        $this->container['ledgerAccountId'] = $ledgerAccountId;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

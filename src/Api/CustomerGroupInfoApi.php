@@ -98,7 +98,7 @@ class CustomerGroupInfoApi
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo
      */
     public function getCustomerGroupInfoByCustomerGroupId($database, $customerGroupId, $fiscalYear = null)
     {
@@ -117,7 +117,7 @@ class CustomerGroupInfoApi
      *
      * @throws \Seacommerce\Unit4\Multivers\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerGroupInfoByCustomerGroupIdWithHttpInfo($database, $customerGroupId, $fiscalYear = null)
     {
@@ -154,20 +154,20 @@ class CustomerGroupInfoApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = 'object';
+            $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -186,7 +186,7 @@ class CustomerGroupInfoApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -232,7 +232,7 @@ class CustomerGroupInfoApi
      */
     public function getCustomerGroupInfoByCustomerGroupIdAsyncWithHttpInfo($database, $customerGroupId, $fiscalYear = null)
     {
-        $returnType = 'object';
+        $returnType = '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo';
         $request = $this->getCustomerGroupInfoByCustomerGroupIdRequest($database, $customerGroupId, $fiscalYear);
 
         return $this->client

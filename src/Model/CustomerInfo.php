@@ -61,16 +61,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'applyOrderSurcharge' => 'bool',
         'businessNumber' => 'string',
         'chargeVatTypeId' => 'int',
+        'city' => 'string',
         'cocCity' => 'string',
         'cocDate' => 'string',
         'cocRegistration' => 'string',
         'collectiveInvoiceSystemId' => 'string',
         'combineInvoicesForElectronicBanking' => 'bool',
         'contactPerson' => 'string',
+        'countryId' => 'string',
         'creditLimit' => 'float',
         'creditSqueezeId' => 'string',
         'currencyId' => 'string',
         'customerGroupId' => 'int',
+        'customerId' => 'string',
         'customerOrganizationId' => 'int',
         'customerStateId' => 'string',
         'dateChanged' => 'string',
@@ -95,17 +98,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'isPurchaseOrganization' => 'bool',
         'languageId' => 'string',
         'mobilePhone' => 'string',
+        'name' => 'string',
+        'organizationId' => 'int',
         'paymentConditionId' => 'string',
         'pricelistId' => 'string',
         'printPurchaseDetails' => 'bool',
         'purchaseOrganizationId' => 'string',
         'purchaseOrganizationMemberId' => 'string',
         'revenueAccountId' => 'string',
+        'shortName' => 'string',
+        'street1' => 'string',
+        'street2' => 'string',
         'telephone' => 'string',
         'usesUBLInvoice' => 'bool',
         'vatNumber' => 'string',
         'vatScenarioId' => 'int',
-        'vatVerificationDate' => 'string'
+        'vatVerificationDate' => 'string',
+        'zipCode' => 'string'
     ];
 
     /**
@@ -118,16 +127,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'applyOrderSurcharge' => null,
         'businessNumber' => null,
         'chargeVatTypeId' => 'int32',
+        'city' => null,
         'cocCity' => null,
         'cocDate' => null,
         'cocRegistration' => null,
         'collectiveInvoiceSystemId' => null,
         'combineInvoicesForElectronicBanking' => null,
         'contactPerson' => null,
+        'countryId' => null,
         'creditLimit' => null,
         'creditSqueezeId' => null,
         'currencyId' => null,
         'customerGroupId' => 'int32',
+        'customerId' => null,
         'customerOrganizationId' => 'int32',
         'customerStateId' => null,
         'dateChanged' => null,
@@ -152,17 +164,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'isPurchaseOrganization' => null,
         'languageId' => null,
         'mobilePhone' => null,
+        'name' => null,
+        'organizationId' => 'int32',
         'paymentConditionId' => null,
         'pricelistId' => null,
         'printPurchaseDetails' => null,
         'purchaseOrganizationId' => null,
         'purchaseOrganizationMemberId' => null,
         'revenueAccountId' => null,
+        'shortName' => null,
+        'street1' => null,
+        'street2' => null,
         'telephone' => null,
         'usesUBLInvoice' => null,
         'vatNumber' => null,
         'vatScenarioId' => 'int32',
-        'vatVerificationDate' => null
+        'vatVerificationDate' => null,
+        'zipCode' => null
     ];
 
     /**
@@ -196,16 +214,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'applyOrderSurcharge' => 'applyOrderSurcharge',
         'businessNumber' => 'businessNumber',
         'chargeVatTypeId' => 'chargeVatTypeId',
+        'city' => 'city',
         'cocCity' => 'cocCity',
         'cocDate' => 'cocDate',
         'cocRegistration' => 'cocRegistration',
         'collectiveInvoiceSystemId' => 'collectiveInvoiceSystemId',
         'combineInvoicesForElectronicBanking' => 'combineInvoicesForElectronicBanking',
         'contactPerson' => 'contactPerson',
+        'countryId' => 'countryId',
         'creditLimit' => 'creditLimit',
         'creditSqueezeId' => 'creditSqueezeId',
         'currencyId' => 'currencyId',
         'customerGroupId' => 'customerGroupId',
+        'customerId' => 'customerId',
         'customerOrganizationId' => 'customerOrganizationId',
         'customerStateId' => 'customerStateId',
         'dateChanged' => 'dateChanged',
@@ -230,17 +251,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'isPurchaseOrganization' => 'isPurchaseOrganization',
         'languageId' => 'languageId',
         'mobilePhone' => 'mobilePhone',
+        'name' => 'name',
+        'organizationId' => 'organizationId',
         'paymentConditionId' => 'paymentConditionId',
         'pricelistId' => 'pricelistId',
         'printPurchaseDetails' => 'printPurchaseDetails',
         'purchaseOrganizationId' => 'purchaseOrganizationId',
         'purchaseOrganizationMemberId' => 'purchaseOrganizationMemberId',
         'revenueAccountId' => 'revenueAccountId',
+        'shortName' => 'shortName',
+        'street1' => 'street1',
+        'street2' => 'street2',
         'telephone' => 'telephone',
         'usesUBLInvoice' => 'usesUBLInvoice',
         'vatNumber' => 'vatNumber',
         'vatScenarioId' => 'vatScenarioId',
-        'vatVerificationDate' => 'vatVerificationDate'
+        'vatVerificationDate' => 'vatVerificationDate',
+        'zipCode' => 'zipCode'
     ];
 
     /**
@@ -253,16 +280,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'applyOrderSurcharge' => 'setApplyOrderSurcharge',
         'businessNumber' => 'setBusinessNumber',
         'chargeVatTypeId' => 'setChargeVatTypeId',
+        'city' => 'setCity',
         'cocCity' => 'setCocCity',
         'cocDate' => 'setCocDate',
         'cocRegistration' => 'setCocRegistration',
         'collectiveInvoiceSystemId' => 'setCollectiveInvoiceSystemId',
         'combineInvoicesForElectronicBanking' => 'setCombineInvoicesForElectronicBanking',
         'contactPerson' => 'setContactPerson',
+        'countryId' => 'setCountryId',
         'creditLimit' => 'setCreditLimit',
         'creditSqueezeId' => 'setCreditSqueezeId',
         'currencyId' => 'setCurrencyId',
         'customerGroupId' => 'setCustomerGroupId',
+        'customerId' => 'setCustomerId',
         'customerOrganizationId' => 'setCustomerOrganizationId',
         'customerStateId' => 'setCustomerStateId',
         'dateChanged' => 'setDateChanged',
@@ -287,17 +317,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'isPurchaseOrganization' => 'setIsPurchaseOrganization',
         'languageId' => 'setLanguageId',
         'mobilePhone' => 'setMobilePhone',
+        'name' => 'setName',
+        'organizationId' => 'setOrganizationId',
         'paymentConditionId' => 'setPaymentConditionId',
         'pricelistId' => 'setPricelistId',
         'printPurchaseDetails' => 'setPrintPurchaseDetails',
         'purchaseOrganizationId' => 'setPurchaseOrganizationId',
         'purchaseOrganizationMemberId' => 'setPurchaseOrganizationMemberId',
         'revenueAccountId' => 'setRevenueAccountId',
+        'shortName' => 'setShortName',
+        'street1' => 'setStreet1',
+        'street2' => 'setStreet2',
         'telephone' => 'setTelephone',
         'usesUBLInvoice' => 'setUsesUBLInvoice',
         'vatNumber' => 'setVatNumber',
         'vatScenarioId' => 'setVatScenarioId',
-        'vatVerificationDate' => 'setVatVerificationDate'
+        'vatVerificationDate' => 'setVatVerificationDate',
+        'zipCode' => 'setZipCode'
     ];
 
     /**
@@ -310,16 +346,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'applyOrderSurcharge' => 'getApplyOrderSurcharge',
         'businessNumber' => 'getBusinessNumber',
         'chargeVatTypeId' => 'getChargeVatTypeId',
+        'city' => 'getCity',
         'cocCity' => 'getCocCity',
         'cocDate' => 'getCocDate',
         'cocRegistration' => 'getCocRegistration',
         'collectiveInvoiceSystemId' => 'getCollectiveInvoiceSystemId',
         'combineInvoicesForElectronicBanking' => 'getCombineInvoicesForElectronicBanking',
         'contactPerson' => 'getContactPerson',
+        'countryId' => 'getCountryId',
         'creditLimit' => 'getCreditLimit',
         'creditSqueezeId' => 'getCreditSqueezeId',
         'currencyId' => 'getCurrencyId',
         'customerGroupId' => 'getCustomerGroupId',
+        'customerId' => 'getCustomerId',
         'customerOrganizationId' => 'getCustomerOrganizationId',
         'customerStateId' => 'getCustomerStateId',
         'dateChanged' => 'getDateChanged',
@@ -344,17 +383,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         'isPurchaseOrganization' => 'getIsPurchaseOrganization',
         'languageId' => 'getLanguageId',
         'mobilePhone' => 'getMobilePhone',
+        'name' => 'getName',
+        'organizationId' => 'getOrganizationId',
         'paymentConditionId' => 'getPaymentConditionId',
         'pricelistId' => 'getPricelistId',
         'printPurchaseDetails' => 'getPrintPurchaseDetails',
         'purchaseOrganizationId' => 'getPurchaseOrganizationId',
         'purchaseOrganizationMemberId' => 'getPurchaseOrganizationMemberId',
         'revenueAccountId' => 'getRevenueAccountId',
+        'shortName' => 'getShortName',
+        'street1' => 'getStreet1',
+        'street2' => 'getStreet2',
         'telephone' => 'getTelephone',
         'usesUBLInvoice' => 'getUsesUBLInvoice',
         'vatNumber' => 'getVatNumber',
         'vatScenarioId' => 'getVatScenarioId',
-        'vatVerificationDate' => 'getVatVerificationDate'
+        'vatVerificationDate' => 'getVatVerificationDate',
+        'zipCode' => 'getZipCode'
     ];
 
     /**
@@ -421,16 +466,19 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         $this->container['applyOrderSurcharge'] = isset($data['applyOrderSurcharge']) ? $data['applyOrderSurcharge'] : null;
         $this->container['businessNumber'] = isset($data['businessNumber']) ? $data['businessNumber'] : null;
         $this->container['chargeVatTypeId'] = isset($data['chargeVatTypeId']) ? $data['chargeVatTypeId'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['cocCity'] = isset($data['cocCity']) ? $data['cocCity'] : null;
         $this->container['cocDate'] = isset($data['cocDate']) ? $data['cocDate'] : null;
         $this->container['cocRegistration'] = isset($data['cocRegistration']) ? $data['cocRegistration'] : null;
         $this->container['collectiveInvoiceSystemId'] = isset($data['collectiveInvoiceSystemId']) ? $data['collectiveInvoiceSystemId'] : null;
         $this->container['combineInvoicesForElectronicBanking'] = isset($data['combineInvoicesForElectronicBanking']) ? $data['combineInvoicesForElectronicBanking'] : null;
         $this->container['contactPerson'] = isset($data['contactPerson']) ? $data['contactPerson'] : null;
+        $this->container['countryId'] = isset($data['countryId']) ? $data['countryId'] : null;
         $this->container['creditLimit'] = isset($data['creditLimit']) ? $data['creditLimit'] : null;
         $this->container['creditSqueezeId'] = isset($data['creditSqueezeId']) ? $data['creditSqueezeId'] : null;
         $this->container['currencyId'] = isset($data['currencyId']) ? $data['currencyId'] : null;
         $this->container['customerGroupId'] = isset($data['customerGroupId']) ? $data['customerGroupId'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['customerOrganizationId'] = isset($data['customerOrganizationId']) ? $data['customerOrganizationId'] : null;
         $this->container['customerStateId'] = isset($data['customerStateId']) ? $data['customerStateId'] : null;
         $this->container['dateChanged'] = isset($data['dateChanged']) ? $data['dateChanged'] : null;
@@ -455,17 +503,23 @@ class CustomerInfo implements ModelInterface, ArrayAccess
         $this->container['isPurchaseOrganization'] = isset($data['isPurchaseOrganization']) ? $data['isPurchaseOrganization'] : null;
         $this->container['languageId'] = isset($data['languageId']) ? $data['languageId'] : null;
         $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['paymentConditionId'] = isset($data['paymentConditionId']) ? $data['paymentConditionId'] : null;
         $this->container['pricelistId'] = isset($data['pricelistId']) ? $data['pricelistId'] : null;
         $this->container['printPurchaseDetails'] = isset($data['printPurchaseDetails']) ? $data['printPurchaseDetails'] : null;
         $this->container['purchaseOrganizationId'] = isset($data['purchaseOrganizationId']) ? $data['purchaseOrganizationId'] : null;
         $this->container['purchaseOrganizationMemberId'] = isset($data['purchaseOrganizationMemberId']) ? $data['purchaseOrganizationMemberId'] : null;
         $this->container['revenueAccountId'] = isset($data['revenueAccountId']) ? $data['revenueAccountId'] : null;
+        $this->container['shortName'] = isset($data['shortName']) ? $data['shortName'] : null;
+        $this->container['street1'] = isset($data['street1']) ? $data['street1'] : null;
+        $this->container['street2'] = isset($data['street2']) ? $data['street2'] : null;
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
         $this->container['usesUBLInvoice'] = isset($data['usesUBLInvoice']) ? $data['usesUBLInvoice'] : null;
         $this->container['vatNumber'] = isset($data['vatNumber']) ? $data['vatNumber'] : null;
         $this->container['vatScenarioId'] = isset($data['vatScenarioId']) ? $data['vatScenarioId'] : null;
         $this->container['vatVerificationDate'] = isset($data['vatVerificationDate']) ? $data['vatVerificationDate'] : null;
+        $this->container['zipCode'] = isset($data['zipCode']) ? $data['zipCode'] : null;
     }
 
     /**
@@ -588,6 +642,30 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     public function setChargeVatTypeId($chargeVatTypeId)
     {
         $this->container['chargeVatTypeId'] = $chargeVatTypeId;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     *
+     * @return string|null
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     *
+     * @param string|null $city city
+     *
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
 
         return $this;
     }
@@ -737,6 +815,30 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets countryId
+     *
+     * @return string|null
+     */
+    public function getCountryId()
+    {
+        return $this->container['countryId'];
+    }
+
+    /**
+     * Sets countryId
+     *
+     * @param string|null $countryId countryId
+     *
+     * @return $this
+     */
+    public function setCountryId($countryId)
+    {
+        $this->container['countryId'] = $countryId;
+
+        return $this;
+    }
+
+    /**
      * Gets creditLimit
      *
      * @return float|null
@@ -828,6 +930,30 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     public function setCustomerGroupId($customerGroupId)
     {
         $this->container['customerGroupId'] = $customerGroupId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customerId
+     *
+     * @return string|null
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+     * Sets customerId
+     *
+     * @param string|null $customerId customerId
+     *
+     * @return $this
+     */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
 
         return $this;
     }
@@ -1413,6 +1539,54 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizationId
+     *
+     * @return int|null
+     */
+    public function getOrganizationId()
+    {
+        return $this->container['organizationId'];
+    }
+
+    /**
+     * Sets organizationId
+     *
+     * @param int|null $organizationId organizationId
+     *
+     * @return $this
+     */
+    public function setOrganizationId($organizationId)
+    {
+        $this->container['organizationId'] = $organizationId;
+
+        return $this;
+    }
+
+    /**
      * Gets paymentConditionId
      *
      * @return string|null
@@ -1557,6 +1731,78 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets shortName
+     *
+     * @return string|null
+     */
+    public function getShortName()
+    {
+        return $this->container['shortName'];
+    }
+
+    /**
+     * Sets shortName
+     *
+     * @param string|null $shortName shortName
+     *
+     * @return $this
+     */
+    public function setShortName($shortName)
+    {
+        $this->container['shortName'] = $shortName;
+
+        return $this;
+    }
+
+    /**
+     * Gets street1
+     *
+     * @return string|null
+     */
+    public function getStreet1()
+    {
+        return $this->container['street1'];
+    }
+
+    /**
+     * Sets street1
+     *
+     * @param string|null $street1 street1
+     *
+     * @return $this
+     */
+    public function setStreet1($street1)
+    {
+        $this->container['street1'] = $street1;
+
+        return $this;
+    }
+
+    /**
+     * Gets street2
+     *
+     * @return string|null
+     */
+    public function getStreet2()
+    {
+        return $this->container['street2'];
+    }
+
+    /**
+     * Sets street2
+     *
+     * @param string|null $street2 street2
+     *
+     * @return $this
+     */
+    public function setStreet2($street2)
+    {
+        $this->container['street2'] = $street2;
+
+        return $this;
+    }
+
+    /**
      * Gets telephone
      *
      * @return string|null
@@ -1672,6 +1918,30 @@ class CustomerInfo implements ModelInterface, ArrayAccess
     public function setVatVerificationDate($vatVerificationDate)
     {
         $this->container['vatVerificationDate'] = $vatVerificationDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets zipCode
+     *
+     * @return string|null
+     */
+    public function getZipCode()
+    {
+        return $this->container['zipCode'];
+    }
+
+    /**
+     * Sets zipCode
+     *
+     * @param string|null $zipCode zipCode
+     *
+     * @return $this
+     */
+    public function setZipCode($zipCode)
+    {
+        $this->container['zipCode'] = $zipCode;
 
         return $this;
     }
