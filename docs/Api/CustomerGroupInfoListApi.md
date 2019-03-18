@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[]**
+[**\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[]**](../Model/CustomerGroupInfo.md)
 
 ### Authorization
 

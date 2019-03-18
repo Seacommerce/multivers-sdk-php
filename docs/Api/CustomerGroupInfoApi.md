@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getCustomerGroupInfoByCustomerGroupId**
-> object getCustomerGroupInfoByCustomerGroupId($database, $customerGroupId, $fiscalYear)
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo getCustomerGroupInfoByCustomerGroupId($database, $customerGroupId, $fiscalYear)
 
 Gets the specified CustomerGroupInfo.
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo**](../Model/CustomerGroupInfo.md)
 
 ### Authorization
 
