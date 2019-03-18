@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
 *ProductInfoListApi* | [**getProductInfoList**](docs/Api/ProductInfoListApi.md#getproductinfolist) | **GET** /api/{database}/ProductInfoList | Gets a list of ProductInfo that matches the specified criteria
 *ProductNVLApi* | [**getProductNVL**](docs/Api/ProductNVLApi.md#getproductnvl) | **GET** /api/{database}/ProductNVL | Gets a name value list of ProductNVL that matches the specified criteria
 *ProductTypeNVLApi* | [**getProductTypeNVL**](docs/Api/ProductTypeNVLApi.md#getproducttypenvl) | **GET** /api/{database}/ProductTypeNVL | Gets a name value list of ProductTypeNVL that matches the specified criteria
+*VatCodeInfoListApi* | [**getVatCodeInfoList**](docs/Api/VatCodeInfoListApi.md#getvatcodeinfolist) | **GET** /api/{database}/VatCodeInfoList | Gets a list of VatCodeInfo that matches the specified criteria
 
 
 ## Documentation For Models
@@ -134,6 +135,8 @@ Class | Method | HTTP request | Description
  - [ProductInfo](docs/Model/ProductInfo.md)
  - [ProductSupplier](docs/Model/ProductSupplier.md)
  - [Stock](docs/Model/Stock.md)
+ - [VatCodeInfo](docs/Model/VatCodeInfo.md)
+ - [VatCodePercentageInfo](docs/Model/VatCodePercentageInfo.md)
 
 
 ## Documentation For Authorization
