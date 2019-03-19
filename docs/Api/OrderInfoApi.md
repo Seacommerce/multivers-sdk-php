@@ -4,14 +4,12 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderInfoByInvoiceId**](OrderInfoApi.md#getOrderInfoByInvoiceId) | **GET** /api/{database}/OrderInfo/ByInvoiceId/{invoiceId} | 
-[**getOrderInfoByOrderId**](OrderInfoApi.md#getOrderInfoByOrderId) | **GET** /api/{database}/OrderInfo/{orderId} | 
+[**getOrderInfoByInvoiceId**](OrderInfoApi.md#getOrderInfoByInvoiceId) | **GET** /api/{database}/OrderInfo/ByInvoiceId/{invoiceId} | Gets the specified OrderInfo.
+[**getOrderInfoByOrderId**](OrderInfoApi.md#getOrderInfoByOrderId) | **GET** /api/{database}/OrderInfo/{orderId} | Gets the specified OrderInfo.
 
 
 # **getOrderInfoByInvoiceId**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo getOrderInfoByInvoiceId($database, $invoiceId)
-
-
 
 Gets the specified OrderInfo.
 
@@ -67,8 +65,6 @@ Name | Type | Description  | Notes
 
 # **getOrderInfoByOrderId**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo getOrderInfoByOrderId($database, $orderId)
-
-
 
 Gets the specified OrderInfo.
 

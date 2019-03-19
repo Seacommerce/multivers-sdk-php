@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **customerIdForInvoice** | **string** |  | [optional] 
 **customerName** | **string** |  | [optional] 
 **deliveryAddress** | **string** |  | [optional] 
+**deliveryAddressId** | **int** |  | [optional] 
 **deliveryConditionDescription** | **string** |  | [optional] 
 **deliveryConditionId** | **string** |  | [optional] 
 **discountAmount** | **float** |  | [optional] 

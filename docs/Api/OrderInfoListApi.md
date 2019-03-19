@@ -4,19 +4,17 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderInfoListByCustomerId**](OrderInfoListApi.md#getOrderInfoListByCustomerId) | **GET** /api/{database}/OrderInfoList/{customerId} | 
-[**getOrderInfoListByCustomerIdAndByFiscalYear**](OrderInfoListApi.md#getOrderInfoListByCustomerIdAndByFiscalYear) | **GET** /api/{database}/OrderInfoList/{customerId}/{fiscalYear} | 
-[**getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen**](OrderInfoListApi.md#getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen) | **GET** /api/{database}/OrderInfoList/{customerId}/{minDate}/{maxDate}/{minPrice}/{maxPrice}/{fiscalYear}/{onlyOpen} | 
-[**getOrderInfoListByProjectId**](OrderInfoListApi.md#getOrderInfoListByProjectId) | **GET** /api/{database}/OrderInfoList/ByProjectId/{projectId} | 
-[**getOrderInfoListOpenOrders**](OrderInfoListApi.md#getOrderInfoListOpenOrders) | **GET** /api/{database}/OrderInfoList/OpenOrders | 
-[**getOrderInfoListOrdersForInvoice**](OrderInfoListApi.md#getOrderInfoListOrdersForInvoice) | **GET** /api/{database}/OrderInfoList/OrdersForInvoice/{invoiceId} | 
-[**getOrderInfoListOrdersReadyToPrintInvoice**](OrderInfoListApi.md#getOrderInfoListOrdersReadyToPrintInvoice) | **GET** /api/{database}/OrderInfoList/OrdersReadyToPrintInvoice | 
+[**getOrderInfoListByCustomerId**](OrderInfoListApi.md#getOrderInfoListByCustomerId) | **GET** /api/{database}/OrderInfoList/{customerId} | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListByCustomerIdAndByFiscalYear**](OrderInfoListApi.md#getOrderInfoListByCustomerIdAndByFiscalYear) | **GET** /api/{database}/OrderInfoList/{customerId}/{fiscalYear} | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen**](OrderInfoListApi.md#getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen) | **GET** /api/{database}/OrderInfoList/{customerId}/{minDate}/{maxDate}/{minPrice}/{maxPrice}/{fiscalYear}/{onlyOpen} | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListByProjectId**](OrderInfoListApi.md#getOrderInfoListByProjectId) | **GET** /api/{database}/OrderInfoList/ByProjectId/{projectId} | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListOpenOrders**](OrderInfoListApi.md#getOrderInfoListOpenOrders) | **GET** /api/{database}/OrderInfoList/OpenOrders | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListOrdersForInvoice**](OrderInfoListApi.md#getOrderInfoListOrdersForInvoice) | **GET** /api/{database}/OrderInfoList/OrdersForInvoice/{invoiceId} | Gets a list of OrderInfo that matches the specified criteria
+[**getOrderInfoListOrdersReadyToPrintInvoice**](OrderInfoListApi.md#getOrderInfoListOrdersReadyToPrintInvoice) | **GET** /api/{database}/OrderInfoList/OrdersReadyToPrintInvoice | Gets a list of OrderInfo that matches the specified criteria
 
 
 # **getOrderInfoListByCustomerId**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListByCustomerId($database, $customerId, $minDate, $maxDate, $minPrice, $maxPrice, $fiscalYear, $onlyOpen, $pageSize, $pageNumber)
-
-
 
 Gets a list of OrderInfo that matches the specified criteria
 
@@ -89,8 +87,6 @@ Name | Type | Description  | Notes
 # **getOrderInfoListByCustomerIdAndByFiscalYear**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListByCustomerIdAndByFiscalYear($database, $customerId, $fiscalYear, $minDate, $maxDate, $minPrice, $maxPrice, $onlyOpen, $pageSize, $pageNumber)
 
-
-
 Gets a list of OrderInfo that matches the specified criteria
 
 ### Example
@@ -161,8 +157,6 @@ Name | Type | Description  | Notes
 
 # **getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen($database, $customerId, $minDate, $maxDate, $minPrice, $maxPrice, $fiscalYear, $onlyOpen, $pageSize, $pageNumber)
-
-
 
 Gets a list of OrderInfo that matches the specified criteria
 
@@ -235,8 +229,6 @@ Name | Type | Description  | Notes
 # **getOrderInfoListByProjectId**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListByProjectId($database, $projectId)
 
-
-
 Gets a list of OrderInfo that matches the specified criteria
 
 ### Example
@@ -291,8 +283,6 @@ Name | Type | Description  | Notes
 
 # **getOrderInfoListOpenOrders**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListOpenOrders($database, $customerId)
-
-
 
 Gets a list of OrderInfo that matches the specified criteria
 
@@ -349,8 +339,6 @@ Name | Type | Description  | Notes
 # **getOrderInfoListOrdersForInvoice**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListOrdersForInvoice($database, $invoiceId)
 
-
-
 Gets a list of OrderInfo that matches the specified criteria
 
 ### Example
@@ -405,8 +393,6 @@ Name | Type | Description  | Notes
 
 # **getOrderInfoListOrdersReadyToPrintInvoice**
 > \Seacommerce\Unit4\Multivers\Sdk\Model\OrderInfo[] getOrderInfoListOrdersReadyToPrintInvoice($database)
-
-
 
 Gets a list of OrderInfo that matches the specified criteria
 

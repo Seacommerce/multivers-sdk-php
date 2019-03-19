@@ -4,13 +4,11 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderStateNVLBy**](OrderStateNVLApi.md#getOrderStateNVLBy) | **GET** /api/{database}/OrderStateNVL | 
+[**getOrderStateNVL**](OrderStateNVLApi.md#getOrderStateNVL) | **GET** /api/{database}/OrderStateNVL | Gets a name value list of OrderStateNVL that matches the specified criteria
 
 
-# **getOrderStateNVLBy**
-> object[] getOrderStateNVLBy($database)
-
-
+# **getOrderStateNVL**
+> object[] getOrderStateNVL($database)
 
 Gets a name value list of OrderStateNVL that matches the specified criteria
 
@@ -33,10 +31,10 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\OrderStateNVLApi(
 $database = 'database_example'; // string | 
 
 try {
-    $result = $apiInstance->getOrderStateNVLBy($database);
+    $result = $apiInstance->getOrderStateNVL($database);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderStateNVLApi->getOrderStateNVLBy: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderStateNVLApi->getOrderStateNVL: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

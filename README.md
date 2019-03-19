@@ -102,6 +102,22 @@ Class | Method | HTTP request | Description
 *CustomerInfoListApi* | [**getCustomerInfoList**](docs/Api/CustomerInfoListApi.md#getcustomerinfolist) | **GET** /api/{database}/CustomerInfoList | Gets a list of CustomerInfo that matches the specified criteria
 *CustomerNVLApi* | [**getCustomerNVL**](docs/Api/CustomerNVLApi.md#getcustomernvl) | **GET** /api/{database}/CustomerNVL | Gets a name value list of CustomerNVL that matches the specified criteria
 *CustomerPersonNVLApi* | [**getCustomerPersonNVLByCustomerId**](docs/Api/CustomerPersonNVLApi.md#getcustomerpersonnvlbycustomerid) | **GET** /api/{database}/CustomerPersonNVL/{customerId} | Gets a name value list of CustomerPersonNVL that matches the specified criteria
+*OrderApi* | [**createOrder**](docs/Api/OrderApi.md#createorder) | **POST** /api/{database}/Order | Creates a new Order with the specified values
+*OrderApi* | [**deleteOrder**](docs/Api/OrderApi.md#deleteorder) | **DELETE** /api/{database}/Order/{orderId} | Deletes the specified Order
+*OrderApi* | [**getOrder**](docs/Api/OrderApi.md#getorder) | **GET** /api/{database}/Order/{orderId} | Gets the specified Order.
+*OrderApi* | [**updateOrder**](docs/Api/OrderApi.md#updateorder) | **PUT** /api/{database}/Order/{orderId} | Updates the specified Order
+*OrderInfoApi* | [**getOrderInfoByInvoiceId**](docs/Api/OrderInfoApi.md#getorderinfobyinvoiceid) | **GET** /api/{database}/OrderInfo/ByInvoiceId/{invoiceId} | Gets the specified OrderInfo.
+*OrderInfoApi* | [**getOrderInfoByOrderId**](docs/Api/OrderInfoApi.md#getorderinfobyorderid) | **GET** /api/{database}/OrderInfo/{orderId} | Gets the specified OrderInfo.
+*OrderInfoListApi* | [**getOrderInfoListByCustomerId**](docs/Api/OrderInfoListApi.md#getorderinfolistbycustomerid) | **GET** /api/{database}/OrderInfoList/{customerId} | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListByCustomerIdAndByFiscalYear**](docs/Api/OrderInfoListApi.md#getorderinfolistbycustomeridandbyfiscalyear) | **GET** /api/{database}/OrderInfoList/{customerId}/{fiscalYear} | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListByCustomerIdAndByMinDateAndByMaxDateAndByMinPriceAndByMaxPriceAndByFiscalYearAndByOnlyOpen**](docs/Api/OrderInfoListApi.md#getorderinfolistbycustomeridandbymindateandbymaxdateandbyminpriceandbymaxpriceandbyfiscalyearandbyonlyopen) | **GET** /api/{database}/OrderInfoList/{customerId}/{minDate}/{maxDate}/{minPrice}/{maxPrice}/{fiscalYear}/{onlyOpen} | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListByProjectId**](docs/Api/OrderInfoListApi.md#getorderinfolistbyprojectid) | **GET** /api/{database}/OrderInfoList/ByProjectId/{projectId} | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListOpenOrders**](docs/Api/OrderInfoListApi.md#getorderinfolistopenorders) | **GET** /api/{database}/OrderInfoList/OpenOrders | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListOrdersForInvoice**](docs/Api/OrderInfoListApi.md#getorderinfolistordersforinvoice) | **GET** /api/{database}/OrderInfoList/OrdersForInvoice/{invoiceId} | Gets a list of OrderInfo that matches the specified criteria
+*OrderInfoListApi* | [**getOrderInfoListOrdersReadyToPrintInvoice**](docs/Api/OrderInfoListApi.md#getorderinfolistordersreadytoprintinvoice) | **GET** /api/{database}/OrderInfoList/OrdersReadyToPrintInvoice | Gets a list of OrderInfo that matches the specified criteria
+*OrderLineTypeNVLApi* | [**getOrderLineTypeNVL**](docs/Api/OrderLineTypeNVLApi.md#getorderlinetypenvl) | **GET** /api/{database}/OrderLineTypeNVL | Gets a name value list of OrderLineTypeNVL that matches the specified criteria
+*OrderStateNVLApi* | [**getOrderStateNVL**](docs/Api/OrderStateNVLApi.md#getorderstatenvl) | **GET** /api/{database}/OrderStateNVL | Gets a name value list of OrderStateNVL that matches the specified criteria
+*OrderTypeNVLApi* | [**getOrderTypeNVL**](docs/Api/OrderTypeNVLApi.md#getordertypenvl) | **GET** /api/{database}/OrderTypeNVL | Gets a name value list of OrderTypeNVL that matches the specified criteria
 *ProductApi* | [**createProduct**](docs/Api/ProductApi.md#createproduct) | **POST** /api/{database}/Product | Creates a new Product with the specified values
 *ProductApi* | [**deleteProduct**](docs/Api/ProductApi.md#deleteproduct) | **DELETE** /api/{database}/Product/{productId} | Deletes the specified Product
 *ProductApi* | [**getProduct**](docs/Api/ProductApi.md#getproduct) | **GET** /api/{database}/Product/{productId} | Gets the specified Product.
@@ -128,6 +144,11 @@ Class | Method | HTTP request | Description
  - [Customer](docs/Model/Customer.md)
  - [CustomerGroupInfo](docs/Model/CustomerGroupInfo.md)
  - [CustomerInfo](docs/Model/CustomerInfo.md)
+ - [Order](docs/Model/Order.md)
+ - [OrderInfo](docs/Model/OrderInfo.md)
+ - [OrderLine](docs/Model/OrderLine.md)
+ - [OrderLineInfo](docs/Model/OrderLineInfo.md)
+ - [OrderVatLineInfo](docs/Model/OrderVatLineInfo.md)
  - [Product](docs/Model/Product.md)
  - [ProductDescription](docs/Model/ProductDescription.md)
  - [ProductGroup](docs/Model/ProductGroup.md)
