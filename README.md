@@ -3,8 +3,6 @@ Unofficial SDK for the UNIT4 Multivers WebApi version 1.10.0 (by Seacommerce).
 
 - API version: 1.10.0
 - Package version: 110.0.0
-- Build package: org.openapitools.codegen.languages.PhpClientCodegen
-For more information, please visit [https://seacommerce.nl](https://seacommerce.nl)
 
 ## Requirements
 
