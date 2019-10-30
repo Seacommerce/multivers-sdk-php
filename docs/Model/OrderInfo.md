@@ -1,6 +1,7 @@
-# OrderInfo
+# # OrderInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountManager** | **string** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **amountExclVat** | **float** |  | [optional] 
 **amountInclVat** | **float** |  | [optional] 
 **cargoWeight** | **float** |  | [optional] 
-**chargeVatType** | **int** |  | [optional] 
+**chargeVatType** | **int** | 0 &#x3D; Exclusive 1 &#x3D; Inclusive 2 &#x3D; Subcontractor 3 &#x3D; NoVat | [optional] 
 **collectiveInvoiceSystemId** | **string** |  | [optional] 
 **contactPerson** | **string** |  | [optional] 
 **contactPersonId** | **string** |  | [optional] 
@@ -60,7 +61,7 @@ Name | Type | Description | Notes
 **processedBy** | **string** |  | [optional] 
 **processedById** | **string** |  | [optional] 
 **projectId** | **string** |  | [optional] 
-**projectOrderInvoicingType** | **int** |  | [optional] 
+**projectOrderInvoicingType** | **int** | 0 &#x3D; Unknown 1 &#x3D; Immediate 2 &#x3D; ProjectInvoicing | [optional] 
 **purchaseOrganizationMemberId** | **string** |  | [optional] 
 **reference** | **string** |  | [optional] 
 **regionId** | **int** |  | [optional] 
@@ -75,6 +76,6 @@ Name | Type | Description | Notes
 **vatAmount** | **float** |  | [optional] 
 **vatScenarioId** | **int** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

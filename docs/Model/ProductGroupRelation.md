@@ -1,6 +1,7 @@
-# ProductGroupRelation
+# # ProductGroupRelation
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **canChange** | **bool** |  | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **productGroupId** | **string** |  | 
 **revenueAccountId** | **string** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

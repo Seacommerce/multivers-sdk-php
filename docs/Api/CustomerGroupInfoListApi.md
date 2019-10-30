@@ -7,20 +7,26 @@ Method | HTTP request | Description
 [**getCustomerGroupInfoList**](CustomerGroupInfoListApi.md#getCustomerGroupInfoList) | **GET** /api/{database}/CustomerGroupInfoList | Gets a list of CustomerGroupInfo that matches the specified criteria
 
 
-# **getCustomerGroupInfoList**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[] getCustomerGroupInfoList($database, $fiscalYear)
+
+## getCustomerGroupInfoList
+
+> \Seacommerce\Unit4\Multivers\Sdk\Model\CustomerGroupInfo[] getCustomerGroupInfoList($database, $fiscalYear, $select, $filter, $orderby, $top, $skip, $expand)
 
 Gets a list of CustomerGroupInfo that matches the specified criteria
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: production
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerGroupInfoListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -30,9 +36,15 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomerGroupInfoListApi(
 );
 $database = 'database_example'; // string | 
 $fiscalYear = 'fiscalYear_example'; // string | 
+$select = 'select_example'; // string | 
+$filter = 'filter_example'; // string | 
+$orderby = 'orderby_example'; // string | 
+$top = 'top_example'; // string | 
+$skip = 'skip_example'; // string | 
+$expand = 'expand_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomerGroupInfoList($database, $fiscalYear);
+    $result = $apiInstance->getCustomerGroupInfoList($database, $fiscalYear, $select, $filter, $orderby, $top, $skip, $expand);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerGroupInfoListApi->getCustomerGroupInfoList: ', $e->getMessage(), PHP_EOL;
@@ -42,10 +54,17 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
  **fiscalYear** | **string**|  | [optional]
+ **select** | **string**|  | [optional]
+ **filter** | **string**|  | [optional]
+ **orderby** | **string**|  | [optional]
+ **top** | **string**|  | [optional]
+ **skip** | **string**|  | [optional]
+ **expand** | **string**|  | [optional]
 
 ### Return type
 
@@ -57,8 +76,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

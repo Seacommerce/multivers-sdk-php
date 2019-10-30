@@ -1,6 +1,7 @@
-# ProductInfo
+# # ProductInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountId** | **string** |  | [optional] 
@@ -19,8 +20,8 @@ Name | Type | Description | Notes
 **printOnWarehouseOrder** | **bool** |  | [optional] 
 **productGroupId** | **string** |  | [optional] 
 **productId** | **string** |  | 
-**productState** | **int** |  | [optional] 
-**productType** | **int** |  | [optional] 
+**productState** | **int** | 0 &#x3D; Active 1 &#x3D; Passive 2 &#x3D; Expiring | [optional] 
+**productType** | **int** | 0 &#x3D; NonStockProduct 1 &#x3D; Text 2 &#x3D; StockProduct 3 &#x3D; Constellation 4 &#x3D; Assembly | [optional] 
 **projectEntryType** | **string** |  | [optional] 
 **projectSurcharge** | **float** |  | [optional] 
 **purchaseOrderSequenceNumber** | **int** |  | [optional] 
@@ -32,6 +33,6 @@ Name | Type | Description | Notes
 **vatCodeId** | **int** |  | [optional] 
 **weight** | **float** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

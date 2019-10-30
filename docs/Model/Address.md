@@ -1,11 +1,12 @@
-# Address
+# # Address
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addressGuid** | **string** |  | [optional] 
 **addressId** | **int** |  | [optional] 
-**addressType** | **int** |  | [optional] 
+**addressType** | **int** | 0 &#x3D; DeliveryAddress 1 &#x3D; InvoiceAddress 2 &#x3D; PersonAddress | [optional] 
 **canChange** | **bool** |  | [optional] 
 **cannotChangeReason** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 
@@ -22,6 +23,6 @@ Name | Type | Description | Notes
 **telephone** | **string** |  | [optional] 
 **zipCode** | **string** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

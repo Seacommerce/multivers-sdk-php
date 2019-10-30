@@ -1,12 +1,13 @@
-# CustomerInfo
+# # CustomerInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountManagerId** | **string** |  | [optional] 
 **applyOrderSurcharge** | **bool** |  | [optional] 
 **businessNumber** | **string** |  | [optional] 
-**chargeVatTypeId** | **int** |  | [optional] 
+**chargeVatTypeId** | **int** | 0 &#x3D; No 1 &#x3D; Yes 2 &#x3D; Subcontractor | [optional] 
 **city** | **string** |  | [optional] 
 **cocCity** | **string** |  | [optional] 
 **cocDate** | **string** |  | [optional] 
@@ -62,6 +63,6 @@ Name | Type | Description | Notes
 **vatVerificationDate** | **string** |  | [optional] 
 **zipCode** | **string** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
