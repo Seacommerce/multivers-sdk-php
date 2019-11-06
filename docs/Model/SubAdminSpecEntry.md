@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **quantity3** | **float** |  | [optional] 
 **quantity4** | **float** |  | [optional] 
 **subAdminId** | **string** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -59,7 +59,8 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'canChange' => 'bool',
         'cannotChangeReason' => 'string',
-        'fieldValues' => 'string[]'
+        'fieldValues' => 'string[]',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -70,7 +71,8 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'canChange' => null,
         'cannotChangeReason' => null,
-        'fieldValues' => null
+        'fieldValues' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -102,7 +104,8 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'canChange' => 'canChange',
         'cannotChangeReason' => 'cannotChangeReason',
-        'fieldValues' => 'fieldValues'
+        'fieldValues' => 'fieldValues',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -113,7 +116,8 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     protected static $setters = [
         'canChange' => 'setCanChange',
         'cannotChangeReason' => 'setCannotChangeReason',
-        'fieldValues' => 'setFieldValues'
+        'fieldValues' => 'setFieldValues',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -124,7 +128,8 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     protected static $getters = [
         'canChange' => 'getCanChange',
         'cannotChangeReason' => 'getCannotChangeReason',
-        'fieldValues' => 'getFieldValues'
+        'fieldValues' => 'getFieldValues',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -190,6 +195,7 @@ class CustomTableRow implements ModelInterface, ArrayAccess
         $this->container['canChange'] = isset($data['canChange']) ? $data['canChange'] : null;
         $this->container['cannotChangeReason'] = isset($data['cannotChangeReason']) ? $data['cannotChangeReason'] : null;
         $this->container['fieldValues'] = isset($data['fieldValues']) ? $data['fieldValues'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -284,6 +290,30 @@ class CustomTableRow implements ModelInterface, ArrayAccess
     public function setFieldValues($fieldValues)
     {
         $this->container['fieldValues'] = $fieldValues;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

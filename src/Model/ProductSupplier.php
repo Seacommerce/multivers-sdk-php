@@ -66,7 +66,8 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         'preferred' => 'bool',
         'price' => 'float',
         'productSupplierId' => 'string',
-        'purchaseSurchargePercentage' => 'float'
+        'purchaseSurchargePercentage' => 'float',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -84,7 +85,8 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         'preferred' => null,
         'price' => null,
         'productSupplierId' => null,
-        'purchaseSurchargePercentage' => null
+        'purchaseSurchargePercentage' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -123,7 +125,8 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         'preferred' => 'preferred',
         'price' => 'price',
         'productSupplierId' => 'productSupplierId',
-        'purchaseSurchargePercentage' => 'purchaseSurchargePercentage'
+        'purchaseSurchargePercentage' => 'purchaseSurchargePercentage',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -141,7 +144,8 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         'preferred' => 'setPreferred',
         'price' => 'setPrice',
         'productSupplierId' => 'setProductSupplierId',
-        'purchaseSurchargePercentage' => 'setPurchaseSurchargePercentage'
+        'purchaseSurchargePercentage' => 'setPurchaseSurchargePercentage',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -159,7 +163,8 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         'preferred' => 'getPreferred',
         'price' => 'getPrice',
         'productSupplierId' => 'getProductSupplierId',
-        'purchaseSurchargePercentage' => 'getPurchaseSurchargePercentage'
+        'purchaseSurchargePercentage' => 'getPurchaseSurchargePercentage',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -232,6 +237,7 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
         $this->container['productSupplierId'] = isset($data['productSupplierId']) ? $data['productSupplierId'] : null;
         $this->container['purchaseSurchargePercentage'] = isset($data['purchaseSurchargePercentage']) ? $data['purchaseSurchargePercentage'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -571,6 +577,30 @@ class ProductSupplier implements ModelInterface, ArrayAccess
         }
 
         $this->container['purchaseSurchargePercentage'] = $purchaseSurchargePercentage;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

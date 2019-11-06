@@ -76,7 +76,8 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         'quantity2' => 'float',
         'quantity3' => 'float',
         'quantity4' => 'float',
-        'subAdminId' => 'string'
+        'subAdminId' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -104,7 +105,8 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         'quantity2' => null,
         'quantity3' => null,
         'quantity4' => null,
-        'subAdminId' => null
+        'subAdminId' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -153,7 +155,8 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         'quantity2' => 'quantity2',
         'quantity3' => 'quantity3',
         'quantity4' => 'quantity4',
-        'subAdminId' => 'subAdminId'
+        'subAdminId' => 'subAdminId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -181,7 +184,8 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         'quantity2' => 'setQuantity2',
         'quantity3' => 'setQuantity3',
         'quantity4' => 'setQuantity4',
-        'subAdminId' => 'setSubAdminId'
+        'subAdminId' => 'setSubAdminId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -209,7 +213,8 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         'quantity2' => 'getQuantity2',
         'quantity3' => 'getQuantity3',
         'quantity4' => 'getQuantity4',
-        'subAdminId' => 'getSubAdminId'
+        'subAdminId' => 'getSubAdminId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -292,6 +297,7 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
         $this->container['quantity3'] = isset($data['quantity3']) ? $data['quantity3'] : null;
         $this->container['quantity4'] = isset($data['quantity4']) ? $data['quantity4'] : null;
         $this->container['subAdminId'] = isset($data['subAdminId']) ? $data['subAdminId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -794,6 +800,30 @@ class SubAdminSpecEntry implements ModelInterface, ArrayAccess
     public function setSubAdminId($subAdminId)
     {
         $this->container['subAdminId'] = $subAdminId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

@@ -84,7 +84,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         'journalId' => 'string',
         'journalSection' => 'string',
         'journalTransaction' => 'int',
-        'kVCPaymentCondition' => 'bool',
+        'kvcPaymentCondition' => 'bool',
         'mandateId' => 'string',
         'numberOfReminders' => 'int',
         'openingBalance' => 'bool',
@@ -140,7 +140,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         'journalId' => null,
         'journalSection' => null,
         'journalTransaction' => 'int32',
-        'kVCPaymentCondition' => null,
+        'kvcPaymentCondition' => null,
         'mandateId' => null,
         'numberOfReminders' => 'int32',
         'openingBalance' => null,
@@ -217,7 +217,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         'journalId' => 'journalId',
         'journalSection' => 'journalSection',
         'journalTransaction' => 'journalTransaction',
-        'kVCPaymentCondition' => 'kVCPaymentCondition',
+        'kvcPaymentCondition' => 'kvcPaymentCondition',
         'mandateId' => 'mandateId',
         'numberOfReminders' => 'numberOfReminders',
         'openingBalance' => 'openingBalance',
@@ -273,7 +273,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         'journalId' => 'setJournalId',
         'journalSection' => 'setJournalSection',
         'journalTransaction' => 'setJournalTransaction',
-        'kVCPaymentCondition' => 'setKVCPaymentCondition',
+        'kvcPaymentCondition' => 'setKvcPaymentCondition',
         'mandateId' => 'setMandateId',
         'numberOfReminders' => 'setNumberOfReminders',
         'openingBalance' => 'setOpeningBalance',
@@ -329,7 +329,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         'journalId' => 'getJournalId',
         'journalSection' => 'getJournalSection',
         'journalTransaction' => 'getJournalTransaction',
-        'kVCPaymentCondition' => 'getKVCPaymentCondition',
+        'kvcPaymentCondition' => 'getKvcPaymentCondition',
         'mandateId' => 'getMandateId',
         'numberOfReminders' => 'getNumberOfReminders',
         'openingBalance' => 'getOpeningBalance',
@@ -439,7 +439,7 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
         $this->container['journalId'] = isset($data['journalId']) ? $data['journalId'] : null;
         $this->container['journalSection'] = isset($data['journalSection']) ? $data['journalSection'] : null;
         $this->container['journalTransaction'] = isset($data['journalTransaction']) ? $data['journalTransaction'] : null;
-        $this->container['kVCPaymentCondition'] = isset($data['kVCPaymentCondition']) ? $data['kVCPaymentCondition'] : null;
+        $this->container['kvcPaymentCondition'] = isset($data['kvcPaymentCondition']) ? $data['kvcPaymentCondition'] : null;
         $this->container['mandateId'] = isset($data['mandateId']) ? $data['mandateId'] : null;
         $this->container['numberOfReminders'] = isset($data['numberOfReminders']) ? $data['numberOfReminders'] : null;
         $this->container['openingBalance'] = isset($data['openingBalance']) ? $data['openingBalance'] : null;
@@ -1264,25 +1264,25 @@ class CustomerInvoice implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets kVCPaymentCondition
+     * Gets kvcPaymentCondition
      *
      * @return bool|null
      */
-    public function getKVCPaymentCondition()
+    public function getKvcPaymentCondition()
     {
-        return $this->container['kVCPaymentCondition'];
+        return $this->container['kvcPaymentCondition'];
     }
 
     /**
-     * Sets kVCPaymentCondition
+     * Sets kvcPaymentCondition
      *
-     * @param bool|null $kVCPaymentCondition kVCPaymentCondition
+     * @param bool|null $kvcPaymentCondition kvcPaymentCondition
      *
      * @return $this
      */
-    public function setKVCPaymentCondition($kVCPaymentCondition)
+    public function setKvcPaymentCondition($kvcPaymentCondition)
     {
-        $this->container['kVCPaymentCondition'] = $kVCPaymentCondition;
+        $this->container['kvcPaymentCondition'] = $kvcPaymentCondition;
 
         return $this;
     }

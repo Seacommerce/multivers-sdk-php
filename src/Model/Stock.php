@@ -71,7 +71,8 @@ class Stock implements ModelInterface, ArrayAccess
         'quantityReserved' => 'float',
         'quantityToDeliver' => 'float',
         'technicalStock' => 'float',
-        'warehouseId' => 'string'
+        'warehouseId' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -94,7 +95,8 @@ class Stock implements ModelInterface, ArrayAccess
         'quantityReserved' => null,
         'quantityToDeliver' => null,
         'technicalStock' => null,
-        'warehouseId' => null
+        'warehouseId' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -138,7 +140,8 @@ class Stock implements ModelInterface, ArrayAccess
         'quantityReserved' => 'quantityReserved',
         'quantityToDeliver' => 'quantityToDeliver',
         'technicalStock' => 'technicalStock',
-        'warehouseId' => 'warehouseId'
+        'warehouseId' => 'warehouseId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -161,7 +164,8 @@ class Stock implements ModelInterface, ArrayAccess
         'quantityReserved' => 'setQuantityReserved',
         'quantityToDeliver' => 'setQuantityToDeliver',
         'technicalStock' => 'setTechnicalStock',
-        'warehouseId' => 'setWarehouseId'
+        'warehouseId' => 'setWarehouseId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -184,7 +188,8 @@ class Stock implements ModelInterface, ArrayAccess
         'quantityReserved' => 'getQuantityReserved',
         'quantityToDeliver' => 'getQuantityToDeliver',
         'technicalStock' => 'getTechnicalStock',
-        'warehouseId' => 'getWarehouseId'
+        'warehouseId' => 'getWarehouseId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -262,6 +267,7 @@ class Stock implements ModelInterface, ArrayAccess
         $this->container['quantityToDeliver'] = isset($data['quantityToDeliver']) ? $data['quantityToDeliver'] : null;
         $this->container['technicalStock'] = isset($data['technicalStock']) ? $data['technicalStock'] : null;
         $this->container['warehouseId'] = isset($data['warehouseId']) ? $data['warehouseId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -671,6 +677,30 @@ class Stock implements ModelInterface, ArrayAccess
         }
 
         $this->container['warehouseId'] = $warehouseId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

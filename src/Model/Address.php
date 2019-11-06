@@ -74,7 +74,8 @@ class Address implements ModelInterface, ArrayAccess
         'street1' => 'string',
         'street2' => 'string',
         'telephone' => 'string',
-        'zipCode' => 'string'
+        'zipCode' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -100,7 +101,8 @@ class Address implements ModelInterface, ArrayAccess
         'street1' => null,
         'street2' => null,
         'telephone' => null,
-        'zipCode' => null
+        'zipCode' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -147,7 +149,8 @@ class Address implements ModelInterface, ArrayAccess
         'street1' => 'street1',
         'street2' => 'street2',
         'telephone' => 'telephone',
-        'zipCode' => 'zipCode'
+        'zipCode' => 'zipCode',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -173,7 +176,8 @@ class Address implements ModelInterface, ArrayAccess
         'street1' => 'setStreet1',
         'street2' => 'setStreet2',
         'telephone' => 'setTelephone',
-        'zipCode' => 'setZipCode'
+        'zipCode' => 'setZipCode',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -199,7 +203,8 @@ class Address implements ModelInterface, ArrayAccess
         'street1' => 'getStreet1',
         'street2' => 'getStreet2',
         'telephone' => 'getTelephone',
-        'zipCode' => 'getZipCode'
+        'zipCode' => 'getZipCode',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -280,6 +285,7 @@ class Address implements ModelInterface, ArrayAccess
         $this->container['street2'] = isset($data['street2']) ? $data['street2'] : null;
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
         $this->container['zipCode'] = isset($data['zipCode']) ? $data['zipCode'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -846,6 +852,30 @@ class Address implements ModelInterface, ArrayAccess
         }
 
         $this->container['zipCode'] = $zipCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

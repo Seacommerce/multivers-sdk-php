@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **price** | **float** |  | [optional] 
 **productSupplierId** | **string** |  | 
 **purchaseSurchargePercentage** | **float** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

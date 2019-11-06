@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **totalOrderAmount** | **float** |  | [optional] 
 **totalVatAmount** | **float** |  | [optional] 
 **vatScenarioId** | **int** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

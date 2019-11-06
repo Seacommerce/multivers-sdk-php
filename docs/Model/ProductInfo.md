@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **dateCreated** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **discountAccountId** | **string** |  | [optional] 
-**eANCode** | **string** |  | [optional] 
+**eanCode** | **string** |  | [optional] 
 **intrastatCode** | **int** |  | [optional] 
 **lastUpdate** | **string** |  | [optional] 
 **priceExclVat** | **float** |  | [optional] 

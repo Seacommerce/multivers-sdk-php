@@ -71,7 +71,8 @@ class Component implements ModelInterface, ArrayAccess
         'totalTransferPrice' => 'float',
         'transferPrice' => 'float',
         'unit' => 'string',
-        'warehouseId' => 'string'
+        'warehouseId' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -94,7 +95,8 @@ class Component implements ModelInterface, ArrayAccess
         'totalTransferPrice' => null,
         'transferPrice' => null,
         'unit' => null,
-        'warehouseId' => null
+        'warehouseId' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -138,7 +140,8 @@ class Component implements ModelInterface, ArrayAccess
         'totalTransferPrice' => 'totalTransferPrice',
         'transferPrice' => 'transferPrice',
         'unit' => 'unit',
-        'warehouseId' => 'warehouseId'
+        'warehouseId' => 'warehouseId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -161,7 +164,8 @@ class Component implements ModelInterface, ArrayAccess
         'totalTransferPrice' => 'setTotalTransferPrice',
         'transferPrice' => 'setTransferPrice',
         'unit' => 'setUnit',
-        'warehouseId' => 'setWarehouseId'
+        'warehouseId' => 'setWarehouseId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -184,7 +188,8 @@ class Component implements ModelInterface, ArrayAccess
         'totalTransferPrice' => 'getTotalTransferPrice',
         'transferPrice' => 'getTransferPrice',
         'unit' => 'getUnit',
-        'warehouseId' => 'getWarehouseId'
+        'warehouseId' => 'getWarehouseId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -262,6 +267,7 @@ class Component implements ModelInterface, ArrayAccess
         $this->container['transferPrice'] = isset($data['transferPrice']) ? $data['transferPrice'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
         $this->container['warehouseId'] = isset($data['warehouseId']) ? $data['warehouseId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -751,6 +757,30 @@ class Component implements ModelInterface, ArrayAccess
         }
 
         $this->container['warehouseId'] = $warehouseId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

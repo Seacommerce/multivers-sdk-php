@@ -35,6 +35,7 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Seacommerce\Unit4\Multivers\Sdk\ApiException;
+use Seacommerce\Unit4\Multivers\Sdk\ApiTrait;
 use Seacommerce\Unit4\Multivers\Sdk\Configuration;
 use Seacommerce\Unit4\Multivers\Sdk\HeaderSelector;
 use Seacommerce\Unit4\Multivers\Sdk\ObjectSerializer;
@@ -49,15 +50,9 @@ use Seacommerce\Unit4\Multivers\Sdk\ObjectSerializer;
  */
 class OrderStateNVLApi
 {
-    /**
-     * @var ClientInterface
-     */
-    protected $client;
-
-    /**
-     * @var Configuration
-     */
-    protected $config;
+    use ApiTrait{
+        ApiTrait::__construct as private __apiTraitConstructor;
+    }
 
     /**
      * @var HeaderSelector
@@ -76,13 +71,12 @@ class OrderStateNVLApi
      * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
+        Configuration $config,
         ClientInterface $client = null,
-        Configuration $config = null,
         HeaderSelector $selector = null,
         $host_index = 0
     ) {
-        $this->client = $client ?: new Client();
-        $this->config = $config ?: new Configuration();
+        $this->__apiTraitConstructor($config, $client);
         $this->headerSelector = $selector ?: new HeaderSelector();
         $this->hostIndex = $host_index;
     }
@@ -366,20 +360,7 @@ class OrderStateNVLApi
             }
         }
 
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
         $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,

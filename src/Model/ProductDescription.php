@@ -61,7 +61,8 @@ class ProductDescription implements ModelInterface, ArrayAccess
         'cannotChangeReason' => 'string',
         'description' => 'string',
         'languageId' => 'string',
-        'unit' => 'string'
+        'unit' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -74,7 +75,8 @@ class ProductDescription implements ModelInterface, ArrayAccess
         'cannotChangeReason' => null,
         'description' => null,
         'languageId' => null,
-        'unit' => null
+        'unit' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -108,7 +110,8 @@ class ProductDescription implements ModelInterface, ArrayAccess
         'cannotChangeReason' => 'cannotChangeReason',
         'description' => 'description',
         'languageId' => 'languageId',
-        'unit' => 'unit'
+        'unit' => 'unit',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -121,7 +124,8 @@ class ProductDescription implements ModelInterface, ArrayAccess
         'cannotChangeReason' => 'setCannotChangeReason',
         'description' => 'setDescription',
         'languageId' => 'setLanguageId',
-        'unit' => 'setUnit'
+        'unit' => 'setUnit',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -134,7 +138,8 @@ class ProductDescription implements ModelInterface, ArrayAccess
         'cannotChangeReason' => 'getCannotChangeReason',
         'description' => 'getDescription',
         'languageId' => 'getLanguageId',
-        'unit' => 'getUnit'
+        'unit' => 'getUnit',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -202,6 +207,7 @@ class ProductDescription implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['languageId'] = isset($data['languageId']) ? $data['languageId'] : null;
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -371,6 +377,30 @@ class ProductDescription implements ModelInterface, ArrayAccess
         }
 
         $this->container['unit'] = $unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **journalId** | **string** |  | 
 **journalSection** | **string** |  | [optional] 
 **journalTransaction** | **int** |  | 
-**kVCPaymentCondition** | **bool** |  | [optional] 
+**kvcPaymentCondition** | **bool** |  | [optional] 
 **mandateId** | **string** |  | [optional] 
 **numberOfReminders** | **int** |  | [optional] 
 **openingBalance** | **bool** |  | [optional] 

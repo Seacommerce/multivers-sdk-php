@@ -83,7 +83,8 @@ class OrderLine implements ModelInterface, ArrayAccess
         'quantityToDeliver' => 'float',
         'unit' => 'string',
         'vatCodeId' => 'int',
-        'warehouseId' => 'string'
+        'warehouseId' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -118,7 +119,8 @@ class OrderLine implements ModelInterface, ArrayAccess
         'quantityToDeliver' => null,
         'unit' => null,
         'vatCodeId' => null,
-        'warehouseId' => null
+        'warehouseId' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -174,7 +176,8 @@ class OrderLine implements ModelInterface, ArrayAccess
         'quantityToDeliver' => 'quantityToDeliver',
         'unit' => 'unit',
         'vatCodeId' => 'vatCodeId',
-        'warehouseId' => 'warehouseId'
+        'warehouseId' => 'warehouseId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -209,7 +212,8 @@ class OrderLine implements ModelInterface, ArrayAccess
         'quantityToDeliver' => 'setQuantityToDeliver',
         'unit' => 'setUnit',
         'vatCodeId' => 'setVatCodeId',
-        'warehouseId' => 'setWarehouseId'
+        'warehouseId' => 'setWarehouseId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -244,7 +248,8 @@ class OrderLine implements ModelInterface, ArrayAccess
         'quantityToDeliver' => 'getQuantityToDeliver',
         'unit' => 'getUnit',
         'vatCodeId' => 'getVatCodeId',
-        'warehouseId' => 'getWarehouseId'
+        'warehouseId' => 'getWarehouseId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -334,6 +339,7 @@ class OrderLine implements ModelInterface, ArrayAccess
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
         $this->container['vatCodeId'] = isset($data['vatCodeId']) ? $data['vatCodeId'] : null;
         $this->container['warehouseId'] = isset($data['warehouseId']) ? $data['warehouseId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -1116,6 +1122,30 @@ class OrderLine implements ModelInterface, ArrayAccess
         }
 
         $this->container['warehouseId'] = $warehouseId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

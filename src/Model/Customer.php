@@ -117,7 +117,7 @@ class Customer implements ModelInterface, ArrayAccess
         'street2' => 'string',
         'supplierId' => 'string',
         'telephone' => 'string',
-        'usesUBLInvoice' => 'bool',
+        'usesUblInvoice' => 'bool',
         'vatNumber' => 'string',
         'vatScenarioId' => 'int',
         'vatVerificationDate' => 'string',
@@ -190,7 +190,7 @@ class Customer implements ModelInterface, ArrayAccess
         'street2' => null,
         'supplierId' => null,
         'telephone' => null,
-        'usesUBLInvoice' => null,
+        'usesUblInvoice' => null,
         'vatNumber' => null,
         'vatScenarioId' => null,
         'vatVerificationDate' => null,
@@ -284,7 +284,7 @@ class Customer implements ModelInterface, ArrayAccess
         'street2' => 'street2',
         'supplierId' => 'supplierId',
         'telephone' => 'telephone',
-        'usesUBLInvoice' => 'usesUBLInvoice',
+        'usesUblInvoice' => 'usesUblInvoice',
         'vatNumber' => 'vatNumber',
         'vatScenarioId' => 'vatScenarioId',
         'vatVerificationDate' => 'vatVerificationDate',
@@ -357,7 +357,7 @@ class Customer implements ModelInterface, ArrayAccess
         'street2' => 'setStreet2',
         'supplierId' => 'setSupplierId',
         'telephone' => 'setTelephone',
-        'usesUBLInvoice' => 'setUsesUBLInvoice',
+        'usesUblInvoice' => 'setUsesUblInvoice',
         'vatNumber' => 'setVatNumber',
         'vatScenarioId' => 'setVatScenarioId',
         'vatVerificationDate' => 'setVatVerificationDate',
@@ -430,7 +430,7 @@ class Customer implements ModelInterface, ArrayAccess
         'street2' => 'getStreet2',
         'supplierId' => 'getSupplierId',
         'telephone' => 'getTelephone',
-        'usesUBLInvoice' => 'getUsesUBLInvoice',
+        'usesUblInvoice' => 'getUsesUblInvoice',
         'vatNumber' => 'getVatNumber',
         'vatScenarioId' => 'getVatScenarioId',
         'vatVerificationDate' => 'getVatVerificationDate',
@@ -557,7 +557,7 @@ class Customer implements ModelInterface, ArrayAccess
         $this->container['street2'] = isset($data['street2']) ? $data['street2'] : null;
         $this->container['supplierId'] = isset($data['supplierId']) ? $data['supplierId'] : null;
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
-        $this->container['usesUBLInvoice'] = isset($data['usesUBLInvoice']) ? $data['usesUBLInvoice'] : null;
+        $this->container['usesUblInvoice'] = isset($data['usesUblInvoice']) ? $data['usesUblInvoice'] : null;
         $this->container['vatNumber'] = isset($data['vatNumber']) ? $data['vatNumber'] : null;
         $this->container['vatScenarioId'] = isset($data['vatScenarioId']) ? $data['vatScenarioId'] : null;
         $this->container['vatVerificationDate'] = isset($data['vatVerificationDate']) ? $data['vatVerificationDate'] : null;
@@ -2347,25 +2347,25 @@ class Customer implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets usesUBLInvoice
+     * Gets usesUblInvoice
      *
      * @return bool|null
      */
-    public function getUsesUBLInvoice()
+    public function getUsesUblInvoice()
     {
-        return $this->container['usesUBLInvoice'];
+        return $this->container['usesUblInvoice'];
     }
 
     /**
-     * Sets usesUBLInvoice
+     * Sets usesUblInvoice
      *
-     * @param bool|null $usesUBLInvoice usesUBLInvoice
+     * @param bool|null $usesUblInvoice usesUblInvoice
      *
      * @return $this
      */
-    public function setUsesUBLInvoice($usesUBLInvoice)
+    public function setUsesUblInvoice($usesUblInvoice)
     {
-        $this->container['usesUBLInvoice'] = $usesUBLInvoice;
+        $this->container['usesUblInvoice'] = $usesUblInvoice;
 
         return $this;
     }

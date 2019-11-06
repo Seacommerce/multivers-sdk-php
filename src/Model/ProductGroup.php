@@ -62,7 +62,8 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'description' => 'string',
         'productGroupId' => 'string',
         'projectSurchargePercentage' => 'float',
-        'relations' => '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroupRelation[]'
+        'relations' => '\Seacommerce\Unit4\Multivers\Sdk\Model\ProductGroupRelation[]',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -76,7 +77,8 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'description' => null,
         'productGroupId' => null,
         'projectSurchargePercentage' => null,
-        'relations' => null
+        'relations' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'description' => 'description',
         'productGroupId' => 'productGroupId',
         'projectSurchargePercentage' => 'projectSurchargePercentage',
-        'relations' => 'relations'
+        'relations' => 'relations',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -125,7 +128,8 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'description' => 'setDescription',
         'productGroupId' => 'setProductGroupId',
         'projectSurchargePercentage' => 'setProjectSurchargePercentage',
-        'relations' => 'setRelations'
+        'relations' => 'setRelations',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -139,7 +143,8 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'description' => 'getDescription',
         'productGroupId' => 'getProductGroupId',
         'projectSurchargePercentage' => 'getProjectSurchargePercentage',
-        'relations' => 'getRelations'
+        'relations' => 'getRelations',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -208,6 +213,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         $this->container['productGroupId'] = isset($data['productGroupId']) ? $data['productGroupId'] : null;
         $this->container['projectSurchargePercentage'] = isset($data['projectSurchargePercentage']) ? $data['projectSurchargePercentage'] : null;
         $this->container['relations'] = isset($data['relations']) ? $data['relations'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -409,6 +415,30 @@ class ProductGroup implements ModelInterface, ArrayAccess
     public function setRelations($relations)
     {
         $this->container['relations'] = $relations;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

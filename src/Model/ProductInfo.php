@@ -61,7 +61,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'dateCreated' => 'string',
         'description' => 'string',
         'discountAccountId' => 'string',
-        'eANCode' => 'string',
+        'eanCode' => 'string',
         'intrastatCode' => 'int',
         'lastUpdate' => 'string',
         'priceExclVat' => 'float',
@@ -97,7 +97,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'dateCreated' => null,
         'description' => null,
         'discountAccountId' => null,
-        'eANCode' => null,
+        'eanCode' => null,
         'intrastatCode' => 'int32',
         'lastUpdate' => null,
         'priceExclVat' => null,
@@ -154,7 +154,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'dateCreated' => 'dateCreated',
         'description' => 'description',
         'discountAccountId' => 'discountAccountId',
-        'eANCode' => 'eANCode',
+        'eanCode' => 'eanCode',
         'intrastatCode' => 'intrastatCode',
         'lastUpdate' => 'lastUpdate',
         'priceExclVat' => 'priceExclVat',
@@ -190,7 +190,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'dateCreated' => 'setDateCreated',
         'description' => 'setDescription',
         'discountAccountId' => 'setDiscountAccountId',
-        'eANCode' => 'setEANCode',
+        'eanCode' => 'setEanCode',
         'intrastatCode' => 'setIntrastatCode',
         'lastUpdate' => 'setLastUpdate',
         'priceExclVat' => 'setPriceExclVat',
@@ -226,7 +226,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         'dateCreated' => 'getDateCreated',
         'description' => 'getDescription',
         'discountAccountId' => 'getDiscountAccountId',
-        'eANCode' => 'getEANCode',
+        'eanCode' => 'getEanCode',
         'intrastatCode' => 'getIntrastatCode',
         'lastUpdate' => 'getLastUpdate',
         'priceExclVat' => 'getPriceExclVat',
@@ -316,7 +316,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
         $this->container['dateCreated'] = isset($data['dateCreated']) ? $data['dateCreated'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['discountAccountId'] = isset($data['discountAccountId']) ? $data['discountAccountId'] : null;
-        $this->container['eANCode'] = isset($data['eANCode']) ? $data['eANCode'] : null;
+        $this->container['eanCode'] = isset($data['eanCode']) ? $data['eanCode'] : null;
         $this->container['intrastatCode'] = isset($data['intrastatCode']) ? $data['intrastatCode'] : null;
         $this->container['lastUpdate'] = isset($data['lastUpdate']) ? $data['lastUpdate'] : null;
         $this->container['priceExclVat'] = isset($data['priceExclVat']) ? $data['priceExclVat'] : null;
@@ -486,25 +486,25 @@ class ProductInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets eANCode
+     * Gets eanCode
      *
      * @return string|null
      */
-    public function getEANCode()
+    public function getEanCode()
     {
-        return $this->container['eANCode'];
+        return $this->container['eanCode'];
     }
 
     /**
-     * Sets eANCode
+     * Sets eanCode
      *
-     * @param string|null $eANCode eANCode
+     * @param string|null $eanCode eanCode
      *
      * @return $this
      */
-    public function setEANCode($eANCode)
+    public function setEanCode($eanCode)
     {
-        $this->container['eANCode'] = $eANCode;
+        $this->container['eanCode'] = $eanCode;
 
         return $this;
     }

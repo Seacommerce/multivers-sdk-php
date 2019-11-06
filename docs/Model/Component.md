@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **transferPrice** | **float** |  | [optional] 
 **unit** | **string** |  | [optional] 
 **warehouseId** | **string** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

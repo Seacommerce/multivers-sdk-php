@@ -100,7 +100,8 @@ class Order implements ModelInterface, ArrayAccess
         'totalGoodsAmount' => 'float',
         'totalOrderAmount' => 'float',
         'totalVatAmount' => 'float',
-        'vatScenarioId' => 'int'
+        'vatScenarioId' => 'int',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -152,7 +153,8 @@ class Order implements ModelInterface, ArrayAccess
         'totalGoodsAmount' => null,
         'totalOrderAmount' => null,
         'totalVatAmount' => null,
-        'vatScenarioId' => 'int32'
+        'vatScenarioId' => 'int32',
+        'customProperties' => null
     ];
 
     /**
@@ -225,7 +227,8 @@ class Order implements ModelInterface, ArrayAccess
         'totalGoodsAmount' => 'totalGoodsAmount',
         'totalOrderAmount' => 'totalOrderAmount',
         'totalVatAmount' => 'totalVatAmount',
-        'vatScenarioId' => 'vatScenarioId'
+        'vatScenarioId' => 'vatScenarioId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -277,7 +280,8 @@ class Order implements ModelInterface, ArrayAccess
         'totalGoodsAmount' => 'setTotalGoodsAmount',
         'totalOrderAmount' => 'setTotalOrderAmount',
         'totalVatAmount' => 'setTotalVatAmount',
-        'vatScenarioId' => 'setVatScenarioId'
+        'vatScenarioId' => 'setVatScenarioId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -329,7 +333,8 @@ class Order implements ModelInterface, ArrayAccess
         'totalGoodsAmount' => 'getTotalGoodsAmount',
         'totalOrderAmount' => 'getTotalOrderAmount',
         'totalVatAmount' => 'getTotalVatAmount',
-        'vatScenarioId' => 'getVatScenarioId'
+        'vatScenarioId' => 'getVatScenarioId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -436,6 +441,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['totalOrderAmount'] = isset($data['totalOrderAmount']) ? $data['totalOrderAmount'] : null;
         $this->container['totalVatAmount'] = isset($data['totalVatAmount']) ? $data['totalVatAmount'] : null;
         $this->container['vatScenarioId'] = isset($data['vatScenarioId']) ? $data['vatScenarioId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -1715,6 +1721,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setVatScenarioId($vatScenarioId)
     {
         $this->container['vatScenarioId'] = $vatScenarioId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

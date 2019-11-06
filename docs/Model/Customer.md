@@ -64,7 +64,7 @@ Name | Type | Description | Notes
 **street2** | **string** |  | [optional] 
 **supplierId** | **string** |  | [optional] 
 **telephone** | **string** |  | [optional] 
-**usesUBLInvoice** | **bool** |  | [optional] 
+**usesUblInvoice** | **bool** |  | [optional] 
 **vatNumber** | **string** |  | [optional] 
 **vatScenarioId** | **int** |  | [optional] 
 **vatVerificationDate** | **string** |  | [optional] 

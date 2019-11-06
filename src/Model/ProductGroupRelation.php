@@ -62,7 +62,8 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         'discountAccountId' => 'string',
         'fiscalYear' => 'int',
         'productGroupId' => 'string',
-        'revenueAccountId' => 'string'
+        'revenueAccountId' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -76,7 +77,8 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         'discountAccountId' => null,
         'fiscalYear' => 'int32',
         'productGroupId' => null,
-        'revenueAccountId' => null
+        'revenueAccountId' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         'discountAccountId' => 'discountAccountId',
         'fiscalYear' => 'fiscalYear',
         'productGroupId' => 'productGroupId',
-        'revenueAccountId' => 'revenueAccountId'
+        'revenueAccountId' => 'revenueAccountId',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -125,7 +128,8 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         'discountAccountId' => 'setDiscountAccountId',
         'fiscalYear' => 'setFiscalYear',
         'productGroupId' => 'setProductGroupId',
-        'revenueAccountId' => 'setRevenueAccountId'
+        'revenueAccountId' => 'setRevenueAccountId',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -139,7 +143,8 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         'discountAccountId' => 'getDiscountAccountId',
         'fiscalYear' => 'getFiscalYear',
         'productGroupId' => 'getProductGroupId',
-        'revenueAccountId' => 'getRevenueAccountId'
+        'revenueAccountId' => 'getRevenueAccountId',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -208,6 +213,7 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
         $this->container['fiscalYear'] = isset($data['fiscalYear']) ? $data['fiscalYear'] : null;
         $this->container['productGroupId'] = isset($data['productGroupId']) ? $data['productGroupId'] : null;
         $this->container['revenueAccountId'] = isset($data['revenueAccountId']) ? $data['revenueAccountId'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -380,6 +386,30 @@ class ProductGroupRelation implements ModelInterface, ArrayAccess
     public function setRevenueAccountId($revenueAccountId)
     {
         $this->container['revenueAccountId'] = $revenueAccountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

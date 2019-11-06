@@ -62,7 +62,8 @@ class CustomTable implements ModelInterface, ArrayAccess
         'fieldNames' => 'string[]',
         'fieldTypes' => 'string[]',
         'tableName' => 'string',
-        'tableRows' => '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomTableRow[]'
+        'tableRows' => '\Seacommerce\Unit4\Multivers\Sdk\Model\CustomTableRow[]',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -76,7 +77,8 @@ class CustomTable implements ModelInterface, ArrayAccess
         'fieldNames' => null,
         'fieldTypes' => null,
         'tableName' => null,
-        'tableRows' => null
+        'tableRows' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class CustomTable implements ModelInterface, ArrayAccess
         'fieldNames' => 'fieldNames',
         'fieldTypes' => 'fieldTypes',
         'tableName' => 'tableName',
-        'tableRows' => 'tableRows'
+        'tableRows' => 'tableRows',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -125,7 +128,8 @@ class CustomTable implements ModelInterface, ArrayAccess
         'fieldNames' => 'setFieldNames',
         'fieldTypes' => 'setFieldTypes',
         'tableName' => 'setTableName',
-        'tableRows' => 'setTableRows'
+        'tableRows' => 'setTableRows',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -139,7 +143,8 @@ class CustomTable implements ModelInterface, ArrayAccess
         'fieldNames' => 'getFieldNames',
         'fieldTypes' => 'getFieldTypes',
         'tableName' => 'getTableName',
-        'tableRows' => 'getTableRows'
+        'tableRows' => 'getTableRows',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -208,6 +213,7 @@ class CustomTable implements ModelInterface, ArrayAccess
         $this->container['fieldTypes'] = isset($data['fieldTypes']) ? $data['fieldTypes'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['tableRows'] = isset($data['tableRows']) ? $data['tableRows'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -374,6 +380,30 @@ class CustomTable implements ModelInterface, ArrayAccess
     public function setTableRows($tableRows)
     {
         $this->container['tableRows'] = $tableRows;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

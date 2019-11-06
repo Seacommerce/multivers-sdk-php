@@ -82,7 +82,8 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         'specRemainingAmountCur' => 'float',
         'subAdminDescription' => 'string',
         'subAdminId' => 'string',
-        'subAdminSpecEntries' => '\Seacommerce\Unit4\Multivers\Sdk\Model\SubAdminSpecEntry[]'
+        'subAdminSpecEntries' => '\Seacommerce\Unit4\Multivers\Sdk\Model\SubAdminSpecEntry[]',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -116,7 +117,8 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         'specRemainingAmountCur' => null,
         'subAdminDescription' => null,
         'subAdminId' => null,
-        'subAdminSpecEntries' => null
+        'subAdminSpecEntries' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -171,7 +173,8 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         'specRemainingAmountCur' => 'specRemainingAmountCur',
         'subAdminDescription' => 'subAdminDescription',
         'subAdminId' => 'subAdminId',
-        'subAdminSpecEntries' => 'subAdminSpecEntries'
+        'subAdminSpecEntries' => 'subAdminSpecEntries',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -205,7 +208,8 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         'specRemainingAmountCur' => 'setSpecRemainingAmountCur',
         'subAdminDescription' => 'setSubAdminDescription',
         'subAdminId' => 'setSubAdminId',
-        'subAdminSpecEntries' => 'setSubAdminSpecEntries'
+        'subAdminSpecEntries' => 'setSubAdminSpecEntries',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -239,7 +243,8 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         'specRemainingAmountCur' => 'getSpecRemainingAmountCur',
         'subAdminDescription' => 'getSubAdminDescription',
         'subAdminId' => 'getSubAdminId',
-        'subAdminSpecEntries' => 'getSubAdminSpecEntries'
+        'subAdminSpecEntries' => 'getSubAdminSpecEntries',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -328,6 +333,7 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
         $this->container['subAdminDescription'] = isset($data['subAdminDescription']) ? $data['subAdminDescription'] : null;
         $this->container['subAdminId'] = isset($data['subAdminId']) ? $data['subAdminId'] : null;
         $this->container['subAdminSpecEntries'] = isset($data['subAdminSpecEntries']) ? $data['subAdminSpecEntries'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -1001,6 +1007,30 @@ class SubAdminSpec implements ModelInterface, ArrayAccess
     public function setSubAdminSpecEntries($subAdminSpecEntries)
     {
         $this->container['subAdminSpecEntries'] = $subAdminSpecEntries;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **dateCreated** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **discountAccountId** | **string** |  | [optional] 
-**eANCode** | **string** |  | [optional] 
+**eanCode** | **string** |  | [optional] 
 **intrastatCode** | **int** |  | [optional] 
 **lastUpdate** | **string** |  | [optional] 
 **margin** | **float** |  | [optional] 
@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **unit** | **string** |  | [optional] 
 **vatCodeId** | **int** |  | [optional] 
 **weight** | **float** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

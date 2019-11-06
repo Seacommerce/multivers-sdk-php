@@ -66,7 +66,8 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         'vatAmountCur' => 'float',
         'vatCodeId' => 'int',
         'vatScenarioId' => 'int',
-        'vatType' => 'int'
+        'vatType' => 'int',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -84,7 +85,8 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         'vatAmountCur' => null,
         'vatCodeId' => 'int32',
         'vatScenarioId' => null,
-        'vatType' => null
+        'vatType' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -123,7 +125,8 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         'vatAmountCur' => 'vatAmountCur',
         'vatCodeId' => 'vatCodeId',
         'vatScenarioId' => 'vatScenarioId',
-        'vatType' => 'vatType'
+        'vatType' => 'vatType',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -141,7 +144,8 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         'vatAmountCur' => 'setVatAmountCur',
         'vatCodeId' => 'setVatCodeId',
         'vatScenarioId' => 'setVatScenarioId',
-        'vatType' => 'setVatType'
+        'vatType' => 'setVatType',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -159,7 +163,8 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         'vatAmountCur' => 'getVatAmountCur',
         'vatCodeId' => 'getVatCodeId',
         'vatScenarioId' => 'getVatScenarioId',
-        'vatType' => 'getVatType'
+        'vatType' => 'getVatType',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -232,6 +237,7 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
         $this->container['vatCodeId'] = isset($data['vatCodeId']) ? $data['vatCodeId'] : null;
         $this->container['vatScenarioId'] = isset($data['vatScenarioId']) ? $data['vatScenarioId'] : null;
         $this->container['vatType'] = isset($data['vatType']) ? $data['vatType'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -510,6 +516,30 @@ class VatTransactionLine implements ModelInterface, ArrayAccess
     public function setVatType($vatType)
     {
         $this->container['vatType'] = $vatType;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }

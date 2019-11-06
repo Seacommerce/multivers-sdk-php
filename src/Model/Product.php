@@ -68,7 +68,7 @@ class Product implements ModelInterface, ArrayAccess
         'dateCreated' => 'string',
         'description' => 'string',
         'discountAccountId' => 'string',
-        'eANCode' => 'string',
+        'eanCode' => 'string',
         'intrastatCode' => 'int',
         'lastUpdate' => 'string',
         'margin' => 'float',
@@ -99,7 +99,8 @@ class Product implements ModelInterface, ArrayAccess
         'stockTransferPrice' => 'float',
         'unit' => 'string',
         'vatCodeId' => 'int',
-        'weight' => 'float'
+        'weight' => 'float',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -119,7 +120,7 @@ class Product implements ModelInterface, ArrayAccess
         'dateCreated' => null,
         'description' => null,
         'discountAccountId' => null,
-        'eANCode' => null,
+        'eanCode' => null,
         'intrastatCode' => 'int32',
         'lastUpdate' => null,
         'margin' => null,
@@ -150,7 +151,8 @@ class Product implements ModelInterface, ArrayAccess
         'stockTransferPrice' => null,
         'unit' => null,
         'vatCodeId' => 'int32',
-        'weight' => null
+        'weight' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -191,7 +193,7 @@ class Product implements ModelInterface, ArrayAccess
         'dateCreated' => 'dateCreated',
         'description' => 'description',
         'discountAccountId' => 'discountAccountId',
-        'eANCode' => 'eANCode',
+        'eanCode' => 'eanCode',
         'intrastatCode' => 'intrastatCode',
         'lastUpdate' => 'lastUpdate',
         'margin' => 'margin',
@@ -222,7 +224,8 @@ class Product implements ModelInterface, ArrayAccess
         'stockTransferPrice' => 'stockTransferPrice',
         'unit' => 'unit',
         'vatCodeId' => 'vatCodeId',
-        'weight' => 'weight'
+        'weight' => 'weight',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -242,7 +245,7 @@ class Product implements ModelInterface, ArrayAccess
         'dateCreated' => 'setDateCreated',
         'description' => 'setDescription',
         'discountAccountId' => 'setDiscountAccountId',
-        'eANCode' => 'setEANCode',
+        'eanCode' => 'setEanCode',
         'intrastatCode' => 'setIntrastatCode',
         'lastUpdate' => 'setLastUpdate',
         'margin' => 'setMargin',
@@ -273,7 +276,8 @@ class Product implements ModelInterface, ArrayAccess
         'stockTransferPrice' => 'setStockTransferPrice',
         'unit' => 'setUnit',
         'vatCodeId' => 'setVatCodeId',
-        'weight' => 'setWeight'
+        'weight' => 'setWeight',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -293,7 +297,7 @@ class Product implements ModelInterface, ArrayAccess
         'dateCreated' => 'getDateCreated',
         'description' => 'getDescription',
         'discountAccountId' => 'getDiscountAccountId',
-        'eANCode' => 'getEANCode',
+        'eanCode' => 'getEanCode',
         'intrastatCode' => 'getIntrastatCode',
         'lastUpdate' => 'getLastUpdate',
         'margin' => 'getMargin',
@@ -324,7 +328,8 @@ class Product implements ModelInterface, ArrayAccess
         'stockTransferPrice' => 'getStockTransferPrice',
         'unit' => 'getUnit',
         'vatCodeId' => 'getVatCodeId',
-        'weight' => 'getWeight'
+        'weight' => 'getWeight',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -398,7 +403,7 @@ class Product implements ModelInterface, ArrayAccess
         $this->container['dateCreated'] = isset($data['dateCreated']) ? $data['dateCreated'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['discountAccountId'] = isset($data['discountAccountId']) ? $data['discountAccountId'] : null;
-        $this->container['eANCode'] = isset($data['eANCode']) ? $data['eANCode'] : null;
+        $this->container['eanCode'] = isset($data['eanCode']) ? $data['eanCode'] : null;
         $this->container['intrastatCode'] = isset($data['intrastatCode']) ? $data['intrastatCode'] : null;
         $this->container['lastUpdate'] = isset($data['lastUpdate']) ? $data['lastUpdate'] : null;
         $this->container['margin'] = isset($data['margin']) ? $data['margin'] : null;
@@ -430,6 +435,7 @@ class Product implements ModelInterface, ArrayAccess
         $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
         $this->container['vatCodeId'] = isset($data['vatCodeId']) ? $data['vatCodeId'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -469,8 +475,8 @@ class Product implements ModelInterface, ArrayAccess
             $invalidProperties[] = "invalid value for 'discountAccountId', the character length must be smaller than or equal to 8.";
         }
 
-        if (!is_null($this->container['eANCode']) && (mb_strlen($this->container['eANCode']) > 14)) {
-            $invalidProperties[] = "invalid value for 'eANCode', the character length must be smaller than or equal to 14.";
+        if (!is_null($this->container['eanCode']) && (mb_strlen($this->container['eanCode']) > 14)) {
+            $invalidProperties[] = "invalid value for 'eanCode', the character length must be smaller than or equal to 14.";
         }
 
         if (!is_null($this->container['intrastatCode']) && ($this->container['intrastatCode'] > 99999999)) {
@@ -879,29 +885,29 @@ class Product implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets eANCode
+     * Gets eanCode
      *
      * @return string|null
      */
-    public function getEANCode()
+    public function getEanCode()
     {
-        return $this->container['eANCode'];
+        return $this->container['eanCode'];
     }
 
     /**
-     * Sets eANCode
+     * Sets eanCode
      *
-     * @param string|null $eANCode eANCode
+     * @param string|null $eanCode eanCode
      *
      * @return $this
      */
-    public function setEANCode($eANCode)
+    public function setEanCode($eanCode)
     {
-        if (!is_null($eANCode) && (mb_strlen($eANCode) > 14)) {
-            throw new \InvalidArgumentException('invalid length for $eANCode when calling Product., must be smaller than or equal to 14.');
+        if (!is_null($eanCode) && (mb_strlen($eanCode) > 14)) {
+            throw new \InvalidArgumentException('invalid length for $eanCode when calling Product., must be smaller than or equal to 14.');
         }
 
-        $this->container['eANCode'] = $eANCode;
+        $this->container['eanCode'] = $eanCode;
 
         return $this;
     }
@@ -1738,6 +1744,30 @@ class Product implements ModelInterface, ArrayAccess
         }
 
         $this->container['weight'] = $weight;
+
+        return $this;
+    }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
 
         return $this;
     }
