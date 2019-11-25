@@ -129,10 +129,12 @@ Class | Method | HTTP request | Description
 *OrderLineTypeNVLApi* | [**getOrderLineTypeNVL**](docs/Api/OrderLineTypeNVLApi.md#getorderlinetypenvl) | **GET** /api/{database}/OrderLineTypeNVL | Gets a name value list of OrderLineTypeNVL that matches the specified criteria
 *OrderStateNVLApi* | [**getOrderStateNVL**](docs/Api/OrderStateNVLApi.md#getorderstatenvl) | **GET** /api/{database}/OrderStateNVL | Gets a name value list of OrderStateNVL that matches the specified criteria
 *OrderTypeNVLApi* | [**getOrderTypeNVL**](docs/Api/OrderTypeNVLApi.md#getordertypenvl) | **GET** /api/{database}/OrderTypeNVL | Gets a name value list of OrderTypeNVL that matches the specified criteria
+*PricelistNVLApi* | [**getPricelistNVL**](docs/Api/PricelistNVLApi.md#getpricelistnvl) | **GET** /api/{database}/PricelistNVL | Gets a name value list of PricelistNVL that matches the specified criteria
 *ProductApi* | [**createProduct**](docs/Api/ProductApi.md#createproduct) | **POST** /api/{database}/Product | Creates a new Product with the specified values
 *ProductApi* | [**deleteProduct**](docs/Api/ProductApi.md#deleteproduct) | **DELETE** /api/{database}/Product/{productId} | Deletes the specified Product
 *ProductApi* | [**getProduct**](docs/Api/ProductApi.md#getproduct) | **GET** /api/{database}/Product/{productId} | Gets the specified Product.
 *ProductApi* | [**updateProduct**](docs/Api/ProductApi.md#updateproduct) | **PUT** /api/{database}/Product/{productId} | Updates the specified Product
+*ProductDiscountGroupNVLApi* | [**getProductDiscountGroupNVL**](docs/Api/ProductDiscountGroupNVLApi.md#getproductdiscountgroupnvl) | **GET** /api/{database}/ProductDiscountGroupNVL | Gets a name value list of ProductDiscountGroupNVL that matches the specified criteria
 *ProductGroupApi* | [**createProductGroup**](docs/Api/ProductGroupApi.md#createproductgroup) | **POST** /api/{database}/ProductGroup | Creates a new ProductGroup with the specified values
 *ProductGroupApi* | [**deleteProductGroup**](docs/Api/ProductGroupApi.md#deleteproductgroup) | **DELETE** /api/{database}/ProductGroup/{productGroupId} | Deletes the specified ProductGroup
 *ProductGroupApi* | [**getProductGroup**](docs/Api/ProductGroupApi.md#getproductgroup) | **GET** /api/{database}/ProductGroup/{productGroupId} | Gets the specified ProductGroup.
