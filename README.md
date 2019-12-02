@@ -2,7 +2,7 @@
 Unofficial SDK for the UNIT4 Multivers WebApi version 1.10.0 (by Seacommerce).
 
 - API version: 1.10.0
-- Package version: 110.0.0
+- Package version: 110.0.6
 
 ## Requirements
 

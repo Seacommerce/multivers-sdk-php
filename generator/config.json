@@ -7,6 +7,6 @@
   "srcBasePath": "src",
   "composerVendorName": "seacommerce",
   "composerProjectName": "multivers-sdk",
-  "artifactVersion": "110.0.0",
+  "artifactVersion": "110.0.6",
   "variableNamingConvention": "camelCase"
 }

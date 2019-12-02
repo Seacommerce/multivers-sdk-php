@@ -86,7 +86,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/110.0.0/PHP';
+    protected $userAgent = 'OpenAPI-Generator/110.0.6/PHP';
 
     /**
      * Debug switch (default set to false)
