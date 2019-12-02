@@ -1,32 +1,34 @@
-# Unit4\Api\Client\OrderChargeVatTypeNVLApi
+# Seacommerce\Unit4\Multivers\Sdk\OrderChargeVatTypeNVLApi
 
 All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderChargeVatTypeNVL**](OrderChargeVatTypeNVLApi.md#getOrderChargeVatTypeNVL) | **GET** /api/{database}/OrderChargeVatTypeNVL | 
+[**getOrderChargeVatTypeNVL**](OrderChargeVatTypeNVLApi.md#getOrderChargeVatTypeNVL) | **GET** /api/{database}/OrderChargeVatTypeNVL | Gets a name value list of OrderChargeVatTypeNVL that matches the specified criteria
 
 
-# **getOrderChargeVatTypeNVL**
+
+## getOrderChargeVatTypeNVL
+
 > object[] getOrderChargeVatTypeNVL($database)
-
-
 
 Gets a name value list of OrderChargeVatTypeNVL that matches the specified criteria
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: production
-$config = Unit4\Api\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure OAuth2 access token for authorization: sandbox
-$config = Unit4\Api\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Unit4\Api\Client\Api\OrderChargeVatTypeNVLApi(
+$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\OrderChargeVatTypeNVLApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -45,6 +47,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
@@ -59,8 +62,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

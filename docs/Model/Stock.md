@@ -1,6 +1,7 @@
-# Stock
+# # Stock
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **availableStock** | **float** |  | [optional] 
@@ -18,7 +19,8 @@ Name | Type | Description | Notes
 **quantityToDeliver** | **float** |  | [optional] 
 **technicalStock** | **float** |  | [optional] 
 **warehouseId** | **string** |  | 
+**customProperties** | [**object**](.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

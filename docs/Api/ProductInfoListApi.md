@@ -7,20 +7,26 @@ Method | HTTP request | Description
 [**getProductInfoList**](ProductInfoListApi.md#getProductInfoList) | **GET** /api/{database}/ProductInfoList | Gets a list of ProductInfo that matches the specified criteria
 
 
-# **getProductInfoList**
-> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo[] getProductInfoList($database, $productId, $shortName, $description, $productGroupId)
+
+## getProductInfoList
+
+> \Seacommerce\Unit4\Multivers\Sdk\Model\ProductInfo[] getProductInfoList($database, $productId, $shortName, $description, $productGroupId, $select, $filter, $orderby, $top, $skip, $expand)
 
 Gets a list of ProductInfo that matches the specified criteria
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: production
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductInfoListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -33,9 +39,15 @@ $productId = 'productId_example'; // string |
 $shortName = 'shortName_example'; // string | 
 $description = 'description_example'; // string | 
 $productGroupId = 'productGroupId_example'; // string | 
+$select = 'select_example'; // string | 
+$filter = 'filter_example'; // string | 
+$orderby = 'orderby_example'; // string | 
+$top = 'top_example'; // string | 
+$skip = 'skip_example'; // string | 
+$expand = 'expand_example'; // string | 
 
 try {
-    $result = $apiInstance->getProductInfoList($database, $productId, $shortName, $description, $productGroupId);
+    $result = $apiInstance->getProductInfoList($database, $productId, $shortName, $description, $productGroupId, $select, $filter, $orderby, $top, $skip, $expand);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductInfoListApi->getProductInfoList: ', $e->getMessage(), PHP_EOL;
@@ -45,6 +57,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
@@ -52,6 +65,12 @@ Name | Type | Description  | Notes
  **shortName** | **string**|  | [optional]
  **description** | **string**|  | [optional]
  **productGroupId** | **string**|  | [optional]
+ **select** | **string**|  | [optional]
+ **filter** | **string**|  | [optional]
+ **orderby** | **string**|  | [optional]
+ **top** | **string**|  | [optional]
+ **skip** | **string**|  | [optional]
+ **expand** | **string**|  | [optional]
 
 ### Return type
 
@@ -63,8 +82,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

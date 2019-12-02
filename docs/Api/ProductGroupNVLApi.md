@@ -7,20 +7,26 @@ Method | HTTP request | Description
 [**getProductGroupNVL**](ProductGroupNVLApi.md#getProductGroupNVL) | **GET** /api/{database}/ProductGroupNVL | Gets a name value list of ProductGroupNVL that matches the specified criteria
 
 
-# **getProductGroupNVL**
+
+## getProductGroupNVL
+
 > object[] getProductGroupNVL($database)
 
 Gets a name value list of ProductGroupNVL that matches the specified criteria
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: production
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ProductGroupNVLApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -41,6 +47,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **database** | **string**|  |
@@ -55,8 +62,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

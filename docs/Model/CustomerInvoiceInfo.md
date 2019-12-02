@@ -1,6 +1,7 @@
-# CustomerInvoiceInfo
+# # CustomerInvoiceInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **string** |  | [optional] 
@@ -40,13 +41,13 @@ Name | Type | Description | Notes
 **settledAmount** | **float** |  | [optional] 
 **settledAmountCur** | **float** |  | [optional] 
 **shortName** | **string** |  | [optional] 
-**state** | **int** |  | [optional] 
+**state** | **int** | 0 &#x3D; Open 1 &#x3D; Settled 2 &#x3D; Overdue | [optional] 
 **street** | **string** |  | [optional] 
 **turnoverAmount** | **float** |  | [optional] 
 **vatAmount** | **float** |  | [optional] 
 **vatAmountCur** | **float** |  | [optional] 
 **zipCode** | **string** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -67,9 +67,15 @@ $apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomFieldDefinitionInfo
 );
 $database = 'database_example'; // string | 
 $entities = 'entities_example'; // string | 
+$select = 'select_example'; // string | 
+$filter = 'filter_example'; // string | 
+$orderby = 'orderby_example'; // string | 
+$top = 'top_example'; // string | 
+$skip = 'skip_example'; // string | 
+$expand = 'expand_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomFieldDefinitionInfoListByEntities($database, $entities);
+    $result = $apiInstance->getCustomFieldDefinitionInfoListByEntities($database, $entities, $select, $filter, $orderby, $top, $skip, $expand);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomFieldDefinitionInfoListApi->getCustomFieldDefinitionInfoListByEntities: ', $e->getMessage(), PHP_EOL;
@@ -98,12 +104,19 @@ Class | Method | HTTP request | Description
 *CustomerGroupNVLApi* | [**getCustomerGroupNVL**](docs/Api/CustomerGroupNVLApi.md#getcustomergroupnvl) | **GET** /api/{database}/CustomerGroupNVL | Gets a name value list of CustomerGroupNVL that matches the specified criteria
 *CustomerInfoApi* | [**getCustomerInfoByCustomerId**](docs/Api/CustomerInfoApi.md#getcustomerinfobycustomerid) | **GET** /api/{database}/CustomerInfo/{customerId} | Gets the specified CustomerInfo.
 *CustomerInfoListApi* | [**getCustomerInfoList**](docs/Api/CustomerInfoListApi.md#getcustomerinfolist) | **GET** /api/{database}/CustomerInfoList | Gets a list of CustomerInfo that matches the specified criteria
+*CustomerInvoiceApi* | [**createCustomerInvoice**](docs/Api/CustomerInvoiceApi.md#createcustomerinvoice) | **POST** /api/{database}/CustomerInvoice | Creates a new CustomerInvoice with the specified values
+*CustomerInvoiceApi* | [**deleteCustomerInvoiceByInvoiceId**](docs/Api/CustomerInvoiceApi.md#deletecustomerinvoicebyinvoiceid) | **DELETE** /api/{database}/CustomerInvoice/{invoiceId} | Deletes the specified CustomerInvoice
+*CustomerInvoiceApi* | [**getCustomerInvoiceByInvoiceId**](docs/Api/CustomerInvoiceApi.md#getcustomerinvoicebyinvoiceid) | **GET** /api/{database}/CustomerInvoice/{invoiceId} | Gets the specified CustomerInvoice.
+*CustomerInvoiceApi* | [**updateCustomerInvoiceByInvoiceId**](docs/Api/CustomerInvoiceApi.md#updatecustomerinvoicebyinvoiceid) | **PUT** /api/{database}/CustomerInvoice/{invoiceId} | Updates the specified CustomerInvoice
+*CustomerInvoiceInfoApi* | [**getCustomerInvoiceInfoByInvoiceId**](docs/Api/CustomerInvoiceInfoApi.md#getcustomerinvoiceinfobyinvoiceid) | **GET** /api/{database}/CustomerInvoiceInfo/{invoiceId} | Gets the specified CustomerInvoiceInfo.
+*CustomerInvoiceInfoApi* | [**getCustomerInvoiceInfoOnlyHeader**](docs/Api/CustomerInvoiceInfoApi.md#getcustomerinvoiceinfoonlyheader) | **GET** /api/{database}/CustomerInvoiceInfo/OnlyHeader/{invoiceId} | Gets the specified CustomerInvoiceInfo.
 *CustomerNVLApi* | [**getCustomerNVL**](docs/Api/CustomerNVLApi.md#getcustomernvl) | **GET** /api/{database}/CustomerNVL | Gets a name value list of CustomerNVL that matches the specified criteria
 *CustomerPersonNVLApi* | [**getCustomerPersonNVLByCustomerId**](docs/Api/CustomerPersonNVLApi.md#getcustomerpersonnvlbycustomerid) | **GET** /api/{database}/CustomerPersonNVL/{customerId} | Gets a name value list of CustomerPersonNVL that matches the specified criteria
 *OrderApi* | [**createOrder**](docs/Api/OrderApi.md#createorder) | **POST** /api/{database}/Order | Creates a new Order with the specified values
 *OrderApi* | [**deleteOrder**](docs/Api/OrderApi.md#deleteorder) | **DELETE** /api/{database}/Order/{orderId} | Deletes the specified Order
 *OrderApi* | [**getOrder**](docs/Api/OrderApi.md#getorder) | **GET** /api/{database}/Order/{orderId} | Gets the specified Order.
 *OrderApi* | [**updateOrder**](docs/Api/OrderApi.md#updateorder) | **PUT** /api/{database}/Order/{orderId} | Updates the specified Order
+*OrderChargeVatTypeNVLApi* | [**getOrderChargeVatTypeNVL**](docs/Api/OrderChargeVatTypeNVLApi.md#getorderchargevattypenvl) | **GET** /api/{database}/OrderChargeVatTypeNVL | Gets a name value list of OrderChargeVatTypeNVL that matches the specified criteria
 *OrderInfoApi* | [**getOrderInfoByInvoiceId**](docs/Api/OrderInfoApi.md#getorderinfobyinvoiceid) | **GET** /api/{database}/OrderInfo/ByInvoiceId/{invoiceId} | Gets the specified OrderInfo.
 *OrderInfoApi* | [**getOrderInfoByOrderId**](docs/Api/OrderInfoApi.md#getorderinfobyorderid) | **GET** /api/{database}/OrderInfo/{orderId} | Gets the specified OrderInfo.
 *OrderInfoListApi* | [**getOrderInfoListByCustomerId**](docs/Api/OrderInfoListApi.md#getorderinfolistbycustomerid) | **GET** /api/{database}/OrderInfoList/{customerId} | Gets a list of OrderInfo that matches the specified criteria
@@ -116,10 +129,12 @@ Class | Method | HTTP request | Description
 *OrderLineTypeNVLApi* | [**getOrderLineTypeNVL**](docs/Api/OrderLineTypeNVLApi.md#getorderlinetypenvl) | **GET** /api/{database}/OrderLineTypeNVL | Gets a name value list of OrderLineTypeNVL that matches the specified criteria
 *OrderStateNVLApi* | [**getOrderStateNVL**](docs/Api/OrderStateNVLApi.md#getorderstatenvl) | **GET** /api/{database}/OrderStateNVL | Gets a name value list of OrderStateNVL that matches the specified criteria
 *OrderTypeNVLApi* | [**getOrderTypeNVL**](docs/Api/OrderTypeNVLApi.md#getordertypenvl) | **GET** /api/{database}/OrderTypeNVL | Gets a name value list of OrderTypeNVL that matches the specified criteria
+*PricelistNVLApi* | [**getPricelistNVL**](docs/Api/PricelistNVLApi.md#getpricelistnvl) | **GET** /api/{database}/PricelistNVL | Gets a name value list of PricelistNVL that matches the specified criteria
 *ProductApi* | [**createProduct**](docs/Api/ProductApi.md#createproduct) | **POST** /api/{database}/Product | Creates a new Product with the specified values
 *ProductApi* | [**deleteProduct**](docs/Api/ProductApi.md#deleteproduct) | **DELETE** /api/{database}/Product/{productId} | Deletes the specified Product
 *ProductApi* | [**getProduct**](docs/Api/ProductApi.md#getproduct) | **GET** /api/{database}/Product/{productId} | Gets the specified Product.
 *ProductApi* | [**updateProduct**](docs/Api/ProductApi.md#updateproduct) | **PUT** /api/{database}/Product/{productId} | Updates the specified Product
+*ProductDiscountGroupNVLApi* | [**getProductDiscountGroupNVL**](docs/Api/ProductDiscountGroupNVLApi.md#getproductdiscountgroupnvl) | **GET** /api/{database}/ProductDiscountGroupNVL | Gets a name value list of ProductDiscountGroupNVL that matches the specified criteria
 *ProductGroupApi* | [**createProductGroup**](docs/Api/ProductGroupApi.md#createproductgroup) | **POST** /api/{database}/ProductGroup | Creates a new ProductGroup with the specified values
 *ProductGroupApi* | [**deleteProductGroup**](docs/Api/ProductGroupApi.md#deleteproductgroup) | **DELETE** /api/{database}/ProductGroup/{productGroupId} | Deletes the specified ProductGroup
 *ProductGroupApi* | [**getProductGroup**](docs/Api/ProductGroupApi.md#getproductgroup) | **GET** /api/{database}/ProductGroup/{productGroupId} | Gets the specified ProductGroup.
@@ -130,6 +145,7 @@ Class | Method | HTTP request | Description
 *ProductNVLApi* | [**getProductNVL**](docs/Api/ProductNVLApi.md#getproductnvl) | **GET** /api/{database}/ProductNVL | Gets a name value list of ProductNVL that matches the specified criteria
 *ProductTypeNVLApi* | [**getProductTypeNVL**](docs/Api/ProductTypeNVLApi.md#getproducttypenvl) | **GET** /api/{database}/ProductTypeNVL | Gets a name value list of ProductTypeNVL that matches the specified criteria
 *VatCodeInfoListApi* | [**getVatCodeInfoList**](docs/Api/VatCodeInfoListApi.md#getvatcodeinfolist) | **GET** /api/{database}/VatCodeInfoList | Gets a list of VatCodeInfo that matches the specified criteria
+*VatCodeNVLApi* | [**getVatCodeNVL**](docs/Api/VatCodeNVLApi.md#getvatcodenvl) | **GET** /api/{database}/VatCodeNVL | Gets a name value list of VatCodeNVL that matches the specified criteria
 
 
 ## Documentation For Models
@@ -142,6 +158,12 @@ Class | Method | HTTP request | Description
  - [Customer](docs/Model/Customer.md)
  - [CustomerGroupInfo](docs/Model/CustomerGroupInfo.md)
  - [CustomerInfo](docs/Model/CustomerInfo.md)
+ - [CustomerInvoice](docs/Model/CustomerInvoice.md)
+ - [CustomerInvoiceInfo](docs/Model/CustomerInvoiceInfo.md)
+ - [CustomerInvoiceLine](docs/Model/CustomerInvoiceLine.md)
+ - [CustomerInvoiceLineInfo](docs/Model/CustomerInvoiceLineInfo.md)
+ - [CustomerInvoicePaymentInfo](docs/Model/CustomerInvoicePaymentInfo.md)
+ - [DocumentLink](docs/Model/DocumentLink.md)
  - [Order](docs/Model/Order.md)
  - [OrderInfo](docs/Model/OrderInfo.md)
  - [OrderLine](docs/Model/OrderLine.md)
@@ -154,8 +176,11 @@ Class | Method | HTTP request | Description
  - [ProductInfo](docs/Model/ProductInfo.md)
  - [ProductSupplier](docs/Model/ProductSupplier.md)
  - [Stock](docs/Model/Stock.md)
+ - [SubAdminSpec](docs/Model/SubAdminSpec.md)
+ - [SubAdminSpecEntry](docs/Model/SubAdminSpecEntry.md)
  - [VatCodeInfo](docs/Model/VatCodeInfo.md)
  - [VatCodePercentageInfo](docs/Model/VatCodePercentageInfo.md)
+ - [VatTransactionLine](docs/Model/VatTransactionLine.md)
 
 
 ## Documentation For Authorization

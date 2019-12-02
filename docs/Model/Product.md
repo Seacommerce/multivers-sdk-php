@@ -1,6 +1,7 @@
-# Product
+# # Product
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountId** | **string** |  | [optional] 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **dateCreated** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **discountAccountId** | **string** |  | [optional] 
-**eANCode** | **string** |  | [optional] 
+**eanCode** | **string** |  | [optional] 
 **intrastatCode** | **int** |  | [optional] 
 **lastUpdate** | **string** |  | [optional] 
 **margin** | **float** |  | [optional] 
@@ -31,10 +32,10 @@ Name | Type | Description | Notes
 **productDiscountGroupId** | **string** |  | [optional] 
 **productGroupId** | **string** |  | [optional] 
 **productId** | **string** |  | 
-**productState** | **int** |  | [optional] 
+**productState** | **int** | 0 &#x3D; Active 1 &#x3D; Passive 2 &#x3D; Expiring | [optional] 
 **productSuppliers** | [**\Seacommerce\Unit4\Multivers\Sdk\Model\ProductSupplier[]**](ProductSupplier.md) |  | [optional] 
-**productType** | **int** |  | [optional] 
-**projectEntryType** | **int** |  | [optional] 
+**productType** | **int** | 0 &#x3D; NonStockProduct 1 &#x3D; Text 2 &#x3D; StockProduct 3 &#x3D; Constellation 4 &#x3D; Assembly | [optional] 
+**projectEntryType** | **int** | 0 &#x3D; None 1 &#x3D; All 2 &#x3D; OtherAndSubcontractor 3 &#x3D; Other 4 &#x3D; Materials 5 &#x3D; Subcontractor 6 &#x3D; Hours | [optional] 
 **projectSurchargePerc** | **float** |  | [optional] 
 **publishOnWeb** | **bool** |  | [optional] 
 **purchaseOrderCount** | **int** |  | [optional] 
@@ -46,7 +47,8 @@ Name | Type | Description | Notes
 **unit** | **string** |  | [optional] 
 **vatCodeId** | **int** |  | [optional] 
 **weight** | **float** |  | [optional] 
+**customProperties** | [**object**](.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
