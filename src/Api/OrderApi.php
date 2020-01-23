@@ -67,16 +67,17 @@ class OrderApi
     /**
      * @param ClientInterface $client
      * @param Configuration   $config
+     * @param array           $clientConfig
      * @param HeaderSelector  $selector
      * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         Configuration $config,
-        ClientInterface $client = null,
+        array $clientConfig = [],
         HeaderSelector $selector = null,
         $host_index = 0
     ) {
-        $this->__apiTraitConstructor($config, $client);
+        $this->__apiTraitConstructor($config, $clientConfig);
         $this->headerSelector = $selector ?: new HeaderSelector();
         $this->hostIndex = $host_index;
     }

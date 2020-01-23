@@ -28,17 +28,21 @@ trait ApiTrait
      * @var string
      */
     protected $accessToken;
+    /**
+     * @var array
+     */
+    private $clientConfig;
 
-    public function __construct(Configuration $config, ClientInterface $client = null)
+    public function __construct(Configuration $config, array $clientConfig = [])
     {
         $this->config = $config;
-        $this->client = $client ?: $this->createClient();
+        $this->clientConfig = $clientConfig;
+        $this->client = $this->createClient($clientConfig);
     }
 
-    public function createClient()
+    public function createClient(array $clientConfig = [])
     {
-        $handler = new CurlHandler();
-        $stack = HandlerStack::create($handler);
+        $stack = HandlerStack::create();
 
         $stack->push(Middleware::retry(function ($retryAttempts, RequestInterface $request, ResponseInterface $response, $ex) {
             if ($response && $response->getStatusCode() === 401 && $retryAttempts < 2) {
@@ -68,7 +72,13 @@ trait ApiTrait
         if ($this->config->getProxy()) {
             $config['proxy'] = $this->config->getProxy();
         }
+
+        if(!empty($clientConfig)) {
+            $config = array_merge($config, $clientConfig);
+        }
+
         $client = new Client($config);
+
         return $client;
     }
 
@@ -95,7 +105,7 @@ trait ApiTrait
                 $config['proxy'] = $this->config->getProxy();
             }
 
-            $authClient = new Client($config);
+            $authClient = new Client(array_merge($this->clientConfig, $config));
 
             $response = $authClient->post($authUri, [
                 'form_params' => [
