@@ -59,26 +59,21 @@ $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration
 // Configure OAuth2 access token for authorization: sandbox
 $config = Seacommerce\Unit4\Multivers\Sdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\CustomFieldDefinitionInfoListApi(
+$apiInstance = new Seacommerce\Unit4\Multivers\Sdk\Api\ContactInfoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $database = 'database_example'; // string | 
-$entities = 'entities_example'; // string | 
-$select = 'select_example'; // string | 
-$filter = 'filter_example'; // string | 
-$orderby = 'orderby_example'; // string | 
-$top = 'top_example'; // string | 
-$skip = 'skip_example'; // string | 
-$expand = 'expand_example'; // string | 
+$organizationId = 'organizationId_example'; // string | 
+$contactId = 'contactId_example'; // string | 
 
 try {
-    $result = $apiInstance->getCustomFieldDefinitionInfoListByEntities($database, $entities, $select, $filter, $orderby, $top, $skip, $expand);
+    $result = $apiInstance->getContactInfoByOrganizationIdAndByContactId($database, $organizationId, $contactId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomFieldDefinitionInfoListApi->getCustomFieldDefinitionInfoListByEntities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactInfoApi->getContactInfoByOrganizationIdAndByContactId: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,6 +85,9 @@ All URIs are relative to *https://sandbox.api.online.unit4.nl/v110*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ContactInfoApi* | [**getContactInfoByOrganizationIdAndByContactId**](docs/Api/ContactInfoApi.md#getcontactinfobyorganizationidandbycontactid) | **GET** /api/{database}/ContactInfo/{organizationId}/{contactId} | Gets the specified ContactInfo.
+*ContactInfoListApi* | [**getContactInfoListByEmailAndByName**](docs/Api/ContactInfoListApi.md#getcontactinfolistbyemailandbyname) | **GET** /api/{database}/ContactInfoList/{email}/{name} | Gets a list of ContactInfo that matches the specified criteria
+*ContactInfoListApi* | [**getContactInfoListByOrganizationId**](docs/Api/ContactInfoListApi.md#getcontactinfolistbyorganizationid) | **GET** /api/{database}/ContactInfoList/{organizationId} | Gets a list of ContactInfo that matches the specified criteria
 *CustomFieldDefinitionInfoListApi* | [**getCustomFieldDefinitionInfoListByEntities**](docs/Api/CustomFieldDefinitionInfoListApi.md#getcustomfielddefinitioninfolistbyentities) | **GET** /api/{database}/CustomFieldDefinitionInfoList/{entities} | Gets a list of CustomFieldDefinitionInfo that matches the specified criteria
 *CustomTableApi* | [**getCustomTableByTableName**](docs/Api/CustomTableApi.md#getcustomtablebytablename) | **GET** /api/{database}/CustomTable/{tableName} | Gets the specified CustomTable.
 *CustomTableApi* | [**updateCustomTableByTableName**](docs/Api/CustomTableApi.md#updatecustomtablebytablename) | **PUT** /api/{database}/CustomTable/{tableName} | Updates the specified CustomTable
@@ -152,6 +150,7 @@ Class | Method | HTTP request | Description
 
  - [Address](docs/Model/Address.md)
  - [Component](docs/Model/Component.md)
+ - [ContactInfo](docs/Model/ContactInfo.md)
  - [CustomFieldDefinitionInfo](docs/Model/CustomFieldDefinitionInfo.md)
  - [CustomTable](docs/Model/CustomTable.md)
  - [CustomTableRow](docs/Model/CustomTableRow.md)
