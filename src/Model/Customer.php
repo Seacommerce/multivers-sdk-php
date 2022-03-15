@@ -121,7 +121,8 @@ class Customer implements ModelInterface, ArrayAccess
         'vatNumber' => 'string',
         'vatScenarioId' => 'int',
         'vatVerificationDate' => 'string',
-        'zipCode' => 'string'
+        'zipCode' => 'string',
+        'customProperties' => 'object'
     ];
 
     /**
@@ -194,7 +195,8 @@ class Customer implements ModelInterface, ArrayAccess
         'vatNumber' => null,
         'vatScenarioId' => null,
         'vatVerificationDate' => null,
-        'zipCode' => null
+        'zipCode' => null,
+        'customProperties' => null
     ];
 
     /**
@@ -288,7 +290,8 @@ class Customer implements ModelInterface, ArrayAccess
         'vatNumber' => 'vatNumber',
         'vatScenarioId' => 'vatScenarioId',
         'vatVerificationDate' => 'vatVerificationDate',
-        'zipCode' => 'zipCode'
+        'zipCode' => 'zipCode',
+        'customProperties' => 'customProperties'
     ];
 
     /**
@@ -361,7 +364,8 @@ class Customer implements ModelInterface, ArrayAccess
         'vatNumber' => 'setVatNumber',
         'vatScenarioId' => 'setVatScenarioId',
         'vatVerificationDate' => 'setVatVerificationDate',
-        'zipCode' => 'setZipCode'
+        'zipCode' => 'setZipCode',
+        'customProperties' => 'setCustomProperties'
     ];
 
     /**
@@ -434,7 +438,8 @@ class Customer implements ModelInterface, ArrayAccess
         'vatNumber' => 'getVatNumber',
         'vatScenarioId' => 'getVatScenarioId',
         'vatVerificationDate' => 'getVatVerificationDate',
-        'zipCode' => 'getZipCode'
+        'zipCode' => 'getZipCode',
+        'customProperties' => 'getCustomProperties'
     ];
 
     /**
@@ -562,6 +567,7 @@ class Customer implements ModelInterface, ArrayAccess
         $this->container['vatScenarioId'] = isset($data['vatScenarioId']) ? $data['vatScenarioId'] : null;
         $this->container['vatVerificationDate'] = isset($data['vatVerificationDate']) ? $data['vatVerificationDate'] : null;
         $this->container['zipCode'] = isset($data['zipCode']) ? $data['zipCode'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
     }
 
     /**
@@ -2473,6 +2479,31 @@ class Customer implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets customProperties
+     *
+     * @return object|null
+     */
+    public function getCustomProperties()
+    {
+        return $this->container['customProperties'];
+    }
+
+    /**
+     * Sets customProperties
+     *
+     * @param object|null $customProperties customProperties
+     *
+     * @return $this
+     */
+    public function setCustomProperties($customProperties)
+    {
+        $this->container['customProperties'] = $customProperties;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
